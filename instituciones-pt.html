@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1-0, minimum-scale=1.0">
+  <title>Virtual Sense - Instituições</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="top-navbar">
+    <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button-link">
+      <button class="button1">Portal do Paciente</button>
+    </a>
+    <a href="https://v2.virtualsense.com.ar/login" class="button-link">
+      <button class="button1">Portal Médico</button>
+    </a>
+    <div class="language-icons">
+        <a href="index-en.html"><img src="img/icon-england.png" alt="EN" class="language-icons-img"></a>
+        <a href="index-pt.html"><img src="img/icon-spain.png" alt="ES" class="language-icons-img"></a>
+    </div>
+  </div>
+  <div class="header-contenedor">
+    <header id="cabecalho">
+      <div class="logo-contenedor">
+        <img src="img/virtual-sense-horizontal-logo.png" alt="Logo do Virtual Sense" class="logo">
+      </div>
+      <nav>
+        <a href="#" id="menu-icon"></a>
+        <ul>
+          <li><a href="index-pt.html">Início</a></li>
+          <li><a href="quienessomos-pt.html">Quem Somos</a></li>
+          <li><a href="telemonitoreo-pt.html">Telemonitoramento</a></li>
+          <li><a href="nuestrosproductos-pt.html">Nossos Produtos</a></li>
+          <li><a href="instituciones-pt.html">Instituições</a></li>
+          <li><a href="#">Canais de Venda</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <section class="instituciones-head">
+    <div class="contenedor">
+      <h3 class="general-title">INSTITUIÇÕES</h3>
+    </div>
+  </section>
+  <section class="instituciones-texto">
+    <div class="contenedor">
+      <h2>As Instituições associadas ao Virtual Sense oferecem:</h2>
+      <ul>
+        <li><strong>Atendimento remoto</strong> em sintonia com as novas demandas dos pacientes, com foco na
+          prevenção.</li><br>
+        <li><strong> Monitoramento diário</strong> em tempo real que alimenta um histórico de eventos por paciente.</li>
+        <br>
+        <li>Incentivo para o cumprimento da <strong>dieta e medicação.</strong></li><br>
+        <li><strong>Detecção precoce de sintomas suspeitos</strong>, alterações nos sinais vitais.</li><br>
+        <li><strong> Precisão do diagnóstico</strong> por utilização de parâmetros médicos baseados em evidências
+          científicas.</li><br>
+        <li> Provisão de <strong>respostas imediatas e focadas</strong> em situações específicas.</li><br>
+        <li><strong>Quebra</strong> das barreiras de espaço e tempo.</li><br>
+      </ul>
+      <h2 style="margin-top:50px; font-family: BwModelicaSS02;
+          margin-bottom: 50px;">Temos presença em:</h2>
+
+      <div class="cajapaises">
+        <div class="pais">
+          <img src="img/flag-argentina.png" height="100" width="250" alt="" />
+        </div>
+        <div class="pais">
+          <img src="img/flag-chile.png" height="100" width="250" alt="" />
+        </div>
+        <div class="pais">
+          <img src="img/flag-ecuador.png" height="100" width="250" alt="" />
+        </div>
+        <div class="pais">
+          <img src="img/flag-venezuela.png" height="100" width="250" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/+5491154991616" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    <div class="tooltip">Precisa de ajuda?<br>Entre em contato!</div>
+  </a>
+
+  <footer>
+    <div class="foot">
+      <div class="logo">
+        <img src="img/virtual-sense-horizontal-logo-color.png" alt="Logo do Virtual Sense">
+      </div>
+      <nav>
+        <a href="https://wa.me/5491154991616">+54 911 5499-1616</a>
+        <a href="#">info@virtualsense.com.ar</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.getElementById('cabecalho');
+      if (window.scrollY > 60) {
+        header.classList.add('scroll');
+      } else {
+        header.classList.remove('scroll');
+      }
+    });
+
+    /*window.addEventListener('scroll', function () {
+      var header = document.getElementById('cabecalho');
+      var logoContainer = document.querySelector('.logo-contenedor');
+      var logo = document.querySelector('.logo');
+
+      if (window.scrollY > 320) {
+        logoContainer.style.width = '220px';
+        logo.style.width = '100%';
+      } else {
+        logoContainer.style.width = '320px';
+        logo.style.width = 'auto';
+      }
+    });*/
+  </script>
+</body>
+
+</html>

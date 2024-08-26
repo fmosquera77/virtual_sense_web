@@ -1,0 +1,1975 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*--- ---FONTS--- ---*/
+@font-face {
+    font-family: BwModelicaSS02;
+    src: url(fonts/BwModelicaSS02-Bold.otf);
+    font-weight: bold;
+    font-size: bold;
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-size: bold;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+    font-size: medium;
+}
+
+/*--- ---Fin de las FONTS--- ---*/
+
+/*--- ---Estilos generales--- ---*/
+body {
+    background: #fff;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+
+
+/* --- ---Estilos para el botón--- --- */
+.button1 {
+    font-family: BwModelicaSS02;
+    display: inline-block;
+    background-color: #289ac0;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.4s;
+    margin: 0px 10px;
+}
+
+.button1:hover {
+    background-color: #1756DF;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*--- ---Fin Estilos para el botón--- --- */
+
+
+/*--- --- --- HEADER --- --- ---*/
+.header-contenedor {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: flex-end; /* Distribuye el espacio entre los botones y los íconos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    background-color: #19192e;
+    height: 70px;
+    padding: 0 10px; /* Espacio interno opcional */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.top-navbar-buttons {
+    display: flex;
+    flex-direction: row; /* Mantiene los botones en una sola línea */
+    flex-wrap: nowrap; /* Evita que los botones se envuelvan */
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center; /* Alinea verticalmente los botones */
+}
+
+.language-icons {
+    display: flex;
+    flex-direction: row; /* Mantiene los íconos en una sola línea */
+    flex-wrap: nowrap; /* Evita que los íconos se envuelvan */
+    gap: 10px; /* Espacio entre los íconos */
+    align-items: center; /* Alinea verticalmente los íconos */
+}
+
+
+.language-icons:hover {
+    cursor: pointer;
+}
+
+
+#cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    top: 70px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s;
+    z-index: 1000;
+
+}
+
+#cabecalho.scroll {
+    background-color: rgba(25, 25, 46, 1);
+    top: 0;
+    transition: 0.5s;
+}
+
+#cabecalho h1 {
+    display: none;
+}
+
+#cabecalho ul {
+    list-style: none;
+    word-spacing: 5px;
+}
+
+#cabecalho li {
+    display: inline-block;
+}
+
+#cabecalho a {
+    margin: 0 20px;
+    padding-bottom: 9px;
+    font-size: 1em;
+    transition: 0.4s;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+#cabecalho a:hover {
+    color: #00DBA7;
+    border-bottom: 2px solid #00DBA7;
+    transition: 1s;
+}
+
+#cabecalho nav {
+    float: right;
+    padding-right: 10px;
+}
+
+#menu-icon {
+    background: url('https://i.ibb.co/5vRFHbL/menu-icon.png') no-repeat center;
+    display: none;
+    width: 32px;
+    height: 32px;
+    padding: 13px 0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    transition: width 0.3s;
+    margin-right: auto;
+}
+
+.logo-contenedor {
+    width: 280px;
+    transition: width 0.3s;
+}
+
+
+/*--- --- --- FIN HEADER --- --- ---*/
+
+/*--- --- --- ICONO WHATSAPP --- --- ---*/
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-float:hover {
+    background-color: #22c35e;
+}
+
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 70px;
+    left: 10%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: nowrap;
+    border: 1px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start invisible */
+    visibility: hidden; /* Start hidden */
+    transition: opacity 0.3s, visibility 0.3s; /* Smooth transition */
+    z-index: 1000;
+    
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+.tooltip.visible {
+    opacity: 1; /* Show the tooltip */
+    visibility: visible; /* Make it visible */
+}
+
+.whatsapp-float:hover .tooltip {
+    opacity: 1;
+    /* Show the tooltip */
+    visibility: visible;
+    /* Make it visible */
+}
+
+/*--- --- --- FIN ICONO WHATSAPP --- --- ---*/
+
+.slider {
+    position: relative;
+}
+
+.slider .slide {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    max-height: 800px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1500px;
+    padding: 30px;
+    margin: auto;
+    color: #000000;
+}
+
+.contenedor-texto {
+    display: flex;
+    align-items: center;
+    margin: 190px 0;
+}
+
+.contenedor-texto .texto h3 {
+    font-family: 'BwModelicaSS02';
+    font-size: 16px;
+    color: #00dba7;
+}
+
+.contenedor-texto .texto h2 {
+    font-family: 'BwModelicaSS02';
+    font-size: 40px;
+    line-height: 60px;
+    color: white;
+}
+
+.contenedor-texto .texto p {
+    font-family: 'Montserrat';
+    line-height: 24px;
+    width: 600px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.indicators {
+    margin-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+.indicator {
+    width: 40px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #00dba7;
+}
+
+.indicator:not(.active) {
+    background-color: #ccc;
+}
+
+/*--- --- --- QUÍENES SOMOS --- --- ---*/
+
+.quienessomos .contenedor .block img {
+    margin: auto;
+    width: 75%;
+    padding: 50px;
+}
+
+.contenidoqs {
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.quienessomos .contenedor .textoqs {
+    margin: left;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.quienessomos .contenedor .textoqs p {
+    font-family: Montserrat;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: #000000;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.quienessomos .contenedor .textoqs h2 {
+    font-family: BwModelicaSS02;
+    font-size: 32px;
+    text-align: left;
+    color: #EB8588;
+    margin-bottom: 20px;
+}
+
+.block {
+    margin: auto;
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px;
+}
+
+/*--- --- --- FIN QUÍENES SOMOS --- --- ---*/
+
+/*--- --- --- BLUE1 --- --- ---*/
+.blue1 {
+    background: #013E6A;
+    height: 525px;
+}
+
+.blue1 .contenedor {
+    display: flex;
+    height: 525px;
+}
+
+.blue1 .contenedor .block img {
+    padding: 0 20%;
+}
+
+.blue1 .contenedor .block h2 {
+    font-family: BwModelicaSS02;
+    font-size: 32px;
+    text-align: left;
+    color: #EB8588;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.blue1 .contenedor .block p {
+    color: #FFFFFF;
+    width: 500px;
+    margin: 0 auto;
+}
+
+/*--- --- --- Fin BLUE1 --- --- ---*/
+
+/*--- --- --- TARJETAS --- --- ---*/
+.tarjetas {
+    text-align: left;
+    height: 600px;
+}
+
+.tarjetas h2 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    margin: 40px;
+    color: #EB8588;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.tarjetas p {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.tarjetas img {
+    width: 60%;
+    align-items: center;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 40px;
+    justify-content: center;
+    max-width: 75rem;
+    gap: 1.5rem;
+}
+
+.articles>* {
+    flex: 1 1 0;
+    /* flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+}
+
+
+.articles article {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 17.5rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.articles article a {
+    display: inline-flex;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.articles article h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+}
+
+.articles article img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.article-preview {
+    padding: 20px;
+    text-align: center;
+}
+
+.article-preview hr {
+    width: 30%;
+    height: 2px;
+    background-color: #00DBA7;
+    border: none;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.articles figure {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles figure img {
+    object-fit: contain;
+    aspect-ratio: 20 / 9;
+    overflow: hidden;
+}
+
+.articles article:hover {
+    transform: translateY(-10px);
+    background-color: #fff;
+    color: #333;
+}
+
+.articles article:hover .icon-down {
+    display: none;
+}
+
+.articles article:hover .icon-up {
+    display: block;
+}
+
+.articles .icon-up {
+    display: none;
+}
+
+/*--- --- --- FIN TARJETAS --- --- ---*/
+
+
+.reproductor1 {
+    width: 100%;
+    margin: auto;
+    padding: 50px;
+}
+
+/*--- --- --- TELEMONITOREO --- --- ---*/
+
+.telemonitoreo .contenedor .infografia {
+    display: flex;
+    flex-direction: column;
+}
+
+.telemonitoreo .contenedor .infografia h2 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    font-size: 32px;
+    margin: 40px;
+    color: #EB8588;
+}
+
+.telemonitoreo .contenedor .infografia img {
+
+    width: 75%;
+    padding: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
+.telemonitoreo .contenedor .texto h3 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    font-size: 32px;
+    margin: 40px;
+    color: #000000;
+}
+
+.telemonitoreo .contenedor .texto p {
+    font-family: Montserrat;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0px 40px 20px 40px;
+    color: #000000;
+}
+
+.telemonitoreo .contenedor .texto .button1 {
+    margin: 15px 40px 0 40px;
+}
+
+/*--- --- --- FIN TELEMONITOREO --- --- ---*/
+
+/*--- --- --- BLUE2 --- --- ---*/
+.blue2 {
+    background: #013E6A;
+    margin: 40px 0;
+    padding: 40px;
+}
+
+.mecanismos {
+    display: flex;
+    flex-direction: column;
+}
+
+.mecanismos h2 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    font-size: 32px;
+    color: #EB8588;
+}
+
+.mecanismos h3 {
+    font-family: BwModelicaSS02;
+    font-size: 26px;
+    margin: 40px;
+    color: #FFFFFF;
+}
+
+.mecanismos img {
+    width: 50%;
+    padding: 0 50px;
+}
+
+.adherencia,
+.parametros,
+.descompensaciones {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.adherencia img,
+.parametros img,
+.descompensaciones img {
+    order: 1;
+}
+
+#mecanismos {
+    display: flex;
+    flex-direction: wrap;
+}
+
+#mecanismos img {
+    width: 100%;
+    padding: 0 50px;
+}
+
+#adherencia,
+#parametros,
+#descompensaciones {
+    margin: auto;
+}
+
+.adherencia h3,
+.parametros h3,
+.descompensaciones h3 {
+    order: 2;
+}
+
+.parametros img {
+    order: 2;
+}
+
+.parametros h3 {
+    order: 1;
+}
+
+.descompensaciones img {
+    order: 1;
+}
+
+.descompensaciones h3 {
+    order: 2;
+}
+
+/*--- --- --- FIN BLUE2 --- --- ---*/
+
+
+.costos2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.costos2 h2 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    font-size: 32px;
+    color: #EB8588;
+    align-self: flex-start;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.textos {
+    flex: 1;
+    align-items: flex-start;
+}
+
+.textos h3 {
+    margin-top: 30px;
+    font-family: BwModelicaSS02;
+    font-size: 28px;
+    color: #252B42;
+    margin-bottom: 30px;
+}
+
+.textos p {
+    margin-top: 30px;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+
+.barras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 550px;
+}
+
+.barras>div {
+    text-align: center;
+    flex: 0 0 100%;
+}
+
+.barras img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 250px;
+}
+
+
+
+/*--- --- --- FOOTER --- --- ---*/
+
+footer {
+    background: #FAFAFA;
+    padding: 20px 0;
+}
+
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+}
+
+footer .foot img {
+    width: 240px;
+}
+
+footer a {
+    font-family: MontserratBold;
+    margin: 0 20px;
+    color: #000000;
+    padding-bottom: 9px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    font-size: 1em;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #1756DF;
+}
+
+/*--- --- --- FIN FOOTER --- --- ---*/
+
+
+
+
+
+/*--- --- --- PAGINA QUIÉNES SOMOS --- --- ---*/
+
+.quienessomos-head {
+    background-image: url(img/how-we-are-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quienessomos-head h3 {
+    font-family: "MontserratBold";
+    font-size: 40px;
+    color: white;
+}
+
+.quienessomos-texto {
+    margin: 50px 0;
+}
+
+.quienessomos-texto p {
+    font-family: "Montserrat";
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+    color: #000000;
+}
+
+/*--- --- --- FIN PAGINA QUIÉNES SOMOS --- --- ---*/
+
+
+
+
+
+/*--- --- --- PAGINA TELEMONITOREO --- --- ---*/
+.telemonitoreo-head {
+    background-image: url(img/telemonitoring-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.telemonitoreo-head h3 {
+    font-family: "MontserratBold";
+    font-size: 40px;
+    color: white;
+}
+
+.contenidoquees {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenidoquees .textoquees {
+    width: 60%;
+    text-align: left;
+}
+
+.contenidoquees .textoquees h2 {
+    font-family: BwModelicaSS02;
+    font-size: 28px;
+    color: #EB8588;
+    margin: 30px 0;
+}
+
+.contenidoquees .textoquees p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.block img {
+    padding: 10% 30%;
+}
+
+/*--- --- SECTION:MONITOREO-REMOTO TELEMONITOREO--- ---*/
+.monitoreo-remoto h2 {
+    font-family: "BwModelicaSS02";
+    font-size: 32px;
+    color: #EB8588;
+}
+
+.contenido-monitoreo-remoto {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+}
+
+.contenido-monitoreo-remoto .block {
+    width: 25px;
+    padding: 30px;
+}
+
+.contenido-monitoreo-remoto .texto-monitoreo-remoto {
+    padding: 25px;
+}
+
+.contenido-monitoreo-remoto .texto-monitoreo-remoto h3 {
+    font-family: BwModelicaSS02;
+    font-size: 28px;
+    color: #252B42;
+    margin: 30px 0;
+}
+
+.contenido-monitoreo-remoto .texto-monitoreo-remoto p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.monitoreo-remoto .contenedor .contenido-monitoreo-remoto .block img {
+    width: 280px;
+    padding: 10% 15%;
+}
+
+/*--- --- FIN SECTION:MONITOREO-REMOTO TELEMONITOREO--- ---*/
+
+
+/*--- --- SECTION:DISPOSITIVOS TELEMONITOREO--- ---*/
+.dispositivos-content h2 {
+    font-family: "BwModelicaSS02";
+    text-align: center;
+    font-size: 32px;
+    color: #EB8588;
+}
+
+.dispositivos-content p {
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    padding: 20px 100px;
+}
+
+.dispositivos-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.disp-img {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: background 0.3s, opacity 0.3s;
+    width: 208px;
+    height: 210px;
+    border-radius: 20px;
+}
+
+.disp-img:hover .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    width: 208px;
+    height: 210px;
+    border-radius: 20px;
+}
+
+.alt-text {
+    text-align: center;
+    font-family: "MontserratBold";
+    font-size: 20px;
+    color: white;
+}
+
+/*--- --- FIN SECTION:DISPOSITIVOS TELEMONITOREO--- ---*/
+
+/*--- --- --- FIN PAGINA TELEMONITOREO --- --- ---*/
+
+
+
+
+
+/*--- --- --- PAGINA NUESTROS PRODUCTOS --- --- ---*/
+
+.titulo-aplicaciones h2 {
+    font-family: "MonserratBold";
+    text-align: center;
+    font-size: 36px;
+    color: #EB8588;
+    align-self: flex-start;
+}
+
+.icc-app h3, .epoc-app h3, .dbt-app h3 {
+    margin-top: 30px;
+    font-family: BwModelicaSS02;
+    font-size: 28px;
+    color: #252B42;
+    margin-bottom: 30px;
+}
+
+
+.white1 {
+    background: white ;
+    height: 525px;
+}
+
+.white1 .contenedor {
+    display: flex;
+    height: 525px;
+}
+
+.white1 .contenedor .block img {
+    padding: 0 20%;
+}
+
+.white1 .contenedor .block h2 {
+    font-family: BwModelicaSS02;
+    font-size: 32px;
+    text-align: left;
+    color: #EB8588;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+.white1 .contenedor .block p {
+    color: black;
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+.experiencia h2 {
+    font-family: BwModelicaSS02;
+    text-align: center;
+    font-size: 32px;
+    color: #EB8588;
+    align-self: flex-start;
+}
+
+.experiencia h3 {
+    font-family: "MontserratBold";
+    text-align: center;
+    font-size: 24px;
+    margin: 50px 0;
+}
+
+.experiencia .datos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto;
+}
+
+.experiencia .datos .numeros {
+    margin: auto;
+    padding: 2em 4em;
+    width: 30%;
+    text-align: center;
+}
+
+.experiencia .datos h4 {
+    font-family: "MontserratBold";
+    font-size: 60px;
+    color: #00DBA7;
+    margin: 0;
+}
+
+.experiencia .datos p {
+    font-family: "Montserrat";
+    font-size: 16px;
+    color: #1756DF;
+    margin: 0;
+}
+
+
+.mecanismo {
+    position: relative;
+    display: inline-block;
+}
+
+.mecanismo img {
+    width: 100%;
+    display: block;
+}
+
+.mecanismo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: background 0.3s, opacity 0.3s;
+    margin: 0 50px;
+    width: 380px;
+    height: 100%;
+    border-radius: 22px;
+}
+
+.mecanismo:hover .overlay {
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    margin: 0 50px;
+    width: 380px;
+    border-radius: 22px;
+}
+
+.alt-text {
+    font-family: "MontserratBold";
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*--- --- SECTION:BLUE2 EVIDENCIA CIENTÍFICA--- ---*/
+.blue2 h2 {
+    font-family: BwModelicaSS02;
+    text-align: center;
+    font-size: 32px;
+    color: #EB8588;
+    margin: 0 auto;
+}
+
+
+/*--- --- FIN SECTION:BLUE2 EVIDENCIA CIENTÍFICA--- ---*/
+
+.te .te-bloques {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.te .te-bloques .te-texto {
+    margin: auto;
+    margin-top: 30px;
+    padding: 2em 1em;
+    width: 30%;
+    height: 150px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.te .te-bloques .te-texto:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 0px rgba(23, 86, 223, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.te .te-bloques h4 {
+    font-family: "MontserratBold";
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+}
+
+.te .te-bloques p {
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+}
+
+/*--- --- --- FIN PAGINA EVIDENCIA CIENTÍFICA --- --- ---*/
+
+
+
+
+
+/*--- --- --- PAGINA INSTITUCIONES --- --- ---*/
+.instituciones-head h3 {
+    font-family: "MontserratBold";
+    color: #fff;
+    font-size: 40px;
+}
+
+.instituciones-head {
+    background-image: url(img/institutions.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.instituciones-texto {
+    margin: 50px 0;
+}
+
+.instituciones-texto h2 {
+    font-family: BwModelicaSS02;
+    text-align: left;
+    color: #EB8588;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/*--- --- --- CARROUSEL DE IMAGENES --- --- ---*/
+.cajainstituciones {
+    margin-top: 20px;
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+}
+
+.cajainstituciones::before,
+.cajainstituciones::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cajainstituciones::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.cajainstituciones::before {
+    left: 0;
+    top: 0;
+}
+
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.institucion {
+    height: 100px;
+    width: 250px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+/*--- --- --- CAJA PAISES --- --- ---*/
+
+
+.cajapaises {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pais {
+    margin: auto;
+}
+
+.pais img {
+    width: auto;
+}
+
+/*--- --- --- FIN PAGINA INSTITUCIONES --- --- ---*/
+
+
+
+
+
+
+/*--- --- --- RESPONSIVE MOBILE HOME  --- --- ---*/
+
+@media screen and (max-width: 1024px) and (min-width: 100px) {
+    .contenedor {
+        text-align: center;
+        width: auto;
+        padding: 1px 0;
+    }
+
+    .contenedor .general-title {
+        font-size: 32px;
+        padding: 25px;
+    }
+
+
+    /* INDEX responsive */
+    /* INDEX-Header responsive*/
+    #cabecalho {
+        position: fixed;
+        height: 60px;
+        align-items: center;
+        display: flex;
+    }
+
+    #cabecalho ul {
+        padding: 10px;
+        width: 75%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+        background-color: #fff;
+        opacity: 0.9;
+    }
+
+    #cabecalho a {
+        color: #1756DF;
+        line-height: 35px;
+    }
+
+    #menu-icon {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        /* Mueve el icono hacia el centro vertical */
+        transform: translateY(-50%);
+        /* Ajusta la posición para que quede exactamente en el centro vertical */
+    }
+
+    nav ul,
+    nav:active ul {
+        display: none;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        margin: 0;
+        right: 30px;
+        width: 35%;
+    }
+
+    nav:hover ul {
+        display: block;
+    }
+
+    nav li {
+        text-align: right;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 280px;
+        margin-left: 10px;
+    }
+
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .button1{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        max-width: 80%;
+        padding: 7px 10px;
+        margin: 0px 5px;
+    }
+
+    /* FIN INDEX-Header responsive*/
+
+
+
+    /* INDEX-BannerSlider responsive*/
+    .contenedor-texto .texto {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contenedor-texto .texto h3 {
+        font-size: 18px;
+    }
+
+    .contenedor-texto .texto h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .contenedor-texto .texto p {
+        font-size: 16px;
+        line-height: 24px;
+        width: auto;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    /* FIN INDEX-BannerSlider responsive*/
+
+
+
+    /* INDEX-Quiénes somos responsive*/
+    .quienessomos .contenedor .block img {
+        margin: auto;
+        width: 60%;
+        padding: 20px 0;
+    }
+
+    .contenidoqs {
+        padding: 20px 0;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quienessomos .contenedor .textoqs {
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .quienessomos .contenedor .textoqs p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .quienessomos .contenedor .textoqs h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .block {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* FIN INDEX-Quiénes somos responsive*/
+
+
+
+    /* INDEX-Blue1 responsive*/
+    .blue1 .contenedor {
+        display: block;
+        text-align: center;
+        height: auto;
+    }
+
+    .blue1 {
+        height: auto;
+        padding: 20px 25px;
+    }
+
+    .blue1 .contenedor .block {
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+
+    .blue1 .contenedor .block img {
+        padding: 0;
+        width: 50%;
+        ;
+        margin: 0 auto;
+    }
+
+    .blue1 .contenedor .block h2 {
+        text-align: center;
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .blue1 .contenedor .block p {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* FIN INDEX-Blue1 responsive*/
+
+
+
+    /* INDEX-Tarjetas responsive*/
+    .tarjetas .contenedor h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .tarjetas .contenedor .articles h2,
+    .tarjetas .contenedor .articles p {
+        text-align: left;
+    }
+
+    .tarjetas {
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .articles {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        padding: 25px;
+    }
+
+    .articles article {
+        flex: 0 0 auto;
+        max-width: 17.5rem;
+        scroll-snap-align: center;
+        margin-right: 1.5rem;
+    }
+
+    /* FIN INDEX-Tarjetas responsive*/
+
+
+
+    /* INDEX-Video responsive*/
+    .reproductor1 {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /* FIN INDEX-Video responsive*/
+
+
+
+    /* INDEX-Telemonitoreo responsive*/
+    .telemonitoreo {
+        padding: 20px 25px;
+        text-align: center;
+    }
+
+    .telemonitoreo .contenedor .infografia h2 {
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .telemonitoreo .contenedor .infografia img {
+        padding: 15px;
+    }
+
+    .telemonitoreo .contenedor .texto h3 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    /* FIN INDEX-Telemonitoreo responsive*/
+
+
+
+    /* INDEX-Blue2 responsive*/
+    .blue2 {
+        padding: 20px;
+    }
+
+    .mecanismos {
+        align-items: center;
+    }
+
+    #mecanismos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mecanismos img {
+        width: 100%;
+        padding: 0 50px;
+        margin: 20px;
+    }
+
+    .mecanismos h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .mecanismos h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .mecanismos img {
+        width: 80%;
+        padding: 0;
+    }
+
+    .adherencia,
+    .parametros,
+    .descompensaciones {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .adherencia img,
+    .parametros img,
+    .descompensaciones img {
+        order: 2;
+        margin-bottom: 20px;
+    }
+
+    .adherencia h3,
+    .parametros h3,
+    .descompensaciones h3 {
+        order: 1;
+    }
+
+    /* FIN INDEX-Blue2 responsive*/
+
+
+
+    /* INDEX-Costos responsive*/
+    .costos {
+        padding: 25px;
+    }
+
+    .costos2 h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .textos h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .textos p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .barras {
+        gap: 20px;
+        max-width: 100%;
+    }
+
+    .barras img {
+        margin-top: 50px;
+        width: 200px;
+    }
+
+    /* FIN INDEX-Costos responsive*/
+
+    /* FOOTER responsive */
+    .foot {
+        flex-direction: column;
+
+    }
+
+    .foot .logo {
+        margin: auto;
+    }
+
+    .foot nav {
+        text-align: center;
+    }
+
+    /* FIN FOOTER responsive */
+    /* FIN INDEX responsive */
+
+
+
+
+
+    /* QUIÉNES SOMOS responsive */
+    /* QUIÉNES SOMOS-Quienessomos-texto responsive*/
+    .quienessomos-texto {
+        padding: 25px;
+    }
+
+    /* FIN QUIÉNES SOMOS-Quienessomos-texto responsive*/
+    /* FIN QUIÉNES SOMOS responsive */
+
+
+
+
+
+    /* TELEMONITOREO responsive */
+    /* TELEMONITOREO-Quees responsive*/
+    .quees {
+        padding: 25px;
+    }
+
+    .quees .contenedor .contenidoquees .textoquees h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .quees .contenedor .contenidoquees .block {
+        display: none;
+    }
+
+    .contenedor .contenidoquees {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor .contenidoquees .textoquees {
+        width: 100%;
+        text-align: left;
+    }
+
+    /* FIN TELEMONITOREO-Quees responsive*/
+
+    .monitoreo-remoto .contenedor h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto .texto-monitoreo-remoto {
+        width: 100%;
+        text-align: left;
+        padding: 0 25px;
+    }
+
+    .contenido-monitoreo-remoto .block {
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto .block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .monitoreo-remoto .contenedor .contenido-monitoreo-remoto .block img {
+        width: 180px;
+        max-width: 180px;
+        padding: 5px;
+    }
+
+
+    /* TELEMONITOREO-Dispositivos responsive*/
+    .dispositivos {
+        padding: 25px;
+    }
+
+    .contenedor .dispositivos-content h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contenedor .dispositivos-content p {
+        padding: 20px;
+    }
+
+
+    .contenedor .dispositivos-content .dispositivos-img {
+        flex-direction: row;
+        align-items: center;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .contenedor .dispositivos-content .dispositivos-img .disp-img {
+        margin-right: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    .contenedor .dispositivos-content .dispositivos-img .disp-img .disp-img:last-child {
+        margin-right: 0;
+    }
+
+    /* FIN TELEMONITOREO-Dispositivos responsive*/
+
+    /* FIN TELEMONITOREO responsive */
+
+
+
+
+
+    /* EVIDENCIA CIENTIFICA responsive */
+    /* EVIDENCIA CIENTIFICA-Mecanismos */
+    .mecanismos-evidencia {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mecanismos-evidencia h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mecanismos-evidencia h3 {
+        font-size: 20px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .mecanismos-evidencia img {
+        width: 80%;
+        padding: 0;
+    }
+
+    /* FIN EVIDENCIA CIENTIFICA-Mecanismos */
+
+
+
+    /* EVIDENCIA CIENTIFICA-Experiencia */
+    .experiencia {
+        padding: 25px;
+    }
+
+    .experiencia h2 {
+        font-size: 30px;
+    }
+
+    .experiencia h3 {
+        font-size: 20px;
+    }
+
+    .experiencia .datos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .experiencia .datos .numeros {
+        margin: 5px 0;
+        padding: 1em 4em;
+        width: 100%;
+    }
+
+    /* FIN EVIDENCIA CIENTIFICA-Experiencia */
+
+
+    /* EVIDENCIA CIENTIFICA-Blue2 */
+    .blue2 h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #mecanismos img {
+        margin: 20px 0;
+    }
+
+    .mecanismo .overlay {
+        width: 290px;
+        border-radius: 16px;
+        height: 141px;
+        margin: 20px 50px;
+    }
+
+    .mecanismo:hover .overlay {
+        width: 290px;
+        border-radius: 16px;
+        height: 141px;
+        margin: 20px 50px;
+    }
+
+    /* FIN EVIDENCIA CIENTIFICA-Blue2 */
+
+    /* EVIDENCIA CIENTIFICA-Te */
+    .te .te-bloques {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 40px;
+        width: 90%;
+    }
+
+    .te .te-bloques .te-texto {
+        width: 45%;
+        height: 190px;
+    }
+
+    .te .te-bloques .te-texto h4 {
+        font-size: 18px;
+    }
+
+    .te .te-bloques .te-texto p {
+        font-size: 12px;
+    }
+
+
+    .te .te-texto {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .te .te-texto h4 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .te .te-texto p {
+        font-size: 9px;
+    }
+
+    /* FIN EVIDENCIA CIENTIFICA-Te */
+    /* FIN EVIDENCIA CIENTIFICA responsive */
+
+
+
+
+
+    /* INSTITUCIONES responsive */
+    .instituciones-texto {
+        padding: 25px;
+    }
+
+    .instituciones-texto h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .instituciones-texto ul {
+        text-align: left;
+        padding: 0 25px;
+    }
+
+    .cajainstituciones {
+        width: 100%;
+    }
+
+    .cajapaises {
+        padding: 20px 0;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .pais {
+        padding: 0 10%;
+    }
+
+    /* FIN INSTITUCIONES responsive */
+}
+
+
+/*--- --- --- FIN RESPONSIVE MOBILE --- --- ---*/

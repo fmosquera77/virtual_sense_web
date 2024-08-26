@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: BwModelicaSS02;
+    src: url('fonts/BwModelicaSS02-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url('fonts/Montserrat-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+}
+
+body {
+    background-color: #19192e;
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 20px;
+}
+
+form {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    font-family: MontserratBold;
+    font-size: 14px;
+    color: #252B42;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.optional {
+    font-size: 0.9em;
+    color: grey;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-checkbox,
+.button-container {
+    grid-column: span 2;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #252B42;
+}
+
+button {
+    font-family: BwModelicaSS02;
+    background-color: #289ac0;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+button:hover {
+    background-color: #1756DF;
+}
+
+.logo {
+    grid-column: span 2;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.checkbox-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.checkbox-container label {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    form {
+        max-width: 500px;
+        grid-template-columns: 1fr;
+    }
+
+    .form-checkbox,
+    .button-container,
+    .logo,
+    .checkbox-container {
+        grid-column: span 1;
+    }
+}

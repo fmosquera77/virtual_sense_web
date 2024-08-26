@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1-0, minimum-scale=1.0">
+    <title>Virtual Sense - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-navbar">
+        <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button-link">
+            <button class="button1">Patient Portal</button>
+        </a>
+        <a href="https://v2.virtualsense.com.ar/login" class="button-link">
+            <button class="button1">Doctor Portal</button>
+        </a>
+        <div class="language-icons">
+            <a href="quienessomos-es.html"><img src="img/icon-spain.png" alt="SP" class="language-icons-img"></a>
+            <a href="quienessomos-pt.html"><img src="img/icon-brazil.png" alt="PT" class="language-icons-img"></a>
+        </div>
+    </div>
+    <div class="header-contenedor">
+        <header id="cabecalho">
+            <div class="logo-contenedor">
+                <img src="img/virtual-sense-horizontal-logo.png" alt="Virtual Sense Logo" class="logo">
+            </div>
+            <nav>
+                <a href="#" id="menu-icon"></a>
+                <ul>
+                    <li><a href="index-en.html">Home</a></li>
+                    <li><a href="quienessomos-en.html">About Us</a></li>
+                    <li><a href="telemonitoreo-en.html">Remote Monitoring</a></li>
+                    <li><a href="nuestrosproductos-en.html">Our Products</a></li>
+                    <li><a href="instituciones-en.html">Institutions</a></li>
+                    <li><a href="#">Sales Channels</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <section class="quienessomos-head">
+        <div class="contenedor">
+            <h3 class="general-title">ABOUT US</h3>
+        </div>
+    </section>
+    <section class="quienessomos-texto">
+        <div class="contenedor">
+            <p>We are a group of professionals: Doctors, Engineers, Scientists, and Software Developers passionate about
+                innovating in the healthcare field day by day and creating real solutions for patients, medical
+                professionals, and healthcare institutions, both providers and payers in the system.<br><br>
+                We are committed to leading the transformation in medical care, ensuring that health is accessible to
+                everyone, at any time and place.</p>
+        </div>
+    </section>
+    <section class="blue1">
+        <div class="contenedor">
+            <div class="block">
+                <img src="img/medical-stethoscope-heart.png" alt="stethoscope">
+            </div>
+            <div class="block">
+                <h2>We make remote health monitoring accessible</h2>
+                <p>+ We empower access to remote health monitoring. <br><br>
+                    + We reinvent the experience of healthcare system clients, creating technological solutions for the
+                    prevention and treatment of different conditions.<br><br>
+                    + We facilitate the lives of users and optimize the management of the various actors involved in the
+                    healthcare system, implementing and incorporating new digital tools that improve the quality and
+                    life expectancy of patients.</p>
+            </div>
+        </div>
+    </section>
+    <section class="tarjetas">
+        <div class="contenedor">
+            <h2>Our Team</h2>
+            <div class="articles">
+                <article>
+                    <figure>
+                        <img src="img/random-face.jpg" alt="Leandro Bergher">
+                    </figure>
+                    <div class="article-preview">
+                        <hr>
+                        <h2>CEO Leandro Bergher</h2>
+                        <p>Position description.</p>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/random-face.jpg" alt="Daniel Setton">
+                    </figure>
+                    <div class="article-preview">
+                        <hr>
+                        <h2>CFO Daniel Setton</h2>
+                        <p>Position description.</p>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/random-face.jpg" alt="Diego Weinstein">
+                    </figure>
+                    <div class="article-preview">
+                        <hr>
+                        <h2>CTO Diego Weinstein</h2>
+                        <p>Position description.</p>
+                    </div>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/random-fer.jpeg" alt="Fernando Mosquera">
+                    </figure>
+                    <div class="article-preview">
+                        <hr>
+                        <h2>Jack of All Trades <br> Fernando Mosquera</h2>
+                        <p>I do everything! <br>I have all the positions! </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/+5491154991616" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            class="whatsapp-icon">
+        <div class="tooltip">Need help?<br> Contact us!</div>
+    </a>
+
+    <footer>
+        <div class="foot">
+            <div class="logo">
+                <img src="img/virtual-sense-horizontal-logo-color.png" alt="Virtual Sense Logo">
+            </div>
+            <nav>
+                <a href="https://wa.me/5491154991616">+54 911 5499-1616</a>
+                <a href="#">info@virtualsense.com.ar</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('cabecalho');
+            if (window.scrollY > 60) {
+                header.classList.add('scroll');
+            } else {
+                header.classList.remove('scroll');
+            }
+        });
+
+        /*window.addEventListener('scroll', function () {
+          var header = document.getElementById('cabecalho');
+          var logoContainer = document.querySelector('.logo-contenedor');
+          var logo = document.querySelector('.logo');
+    
+          if (window.scrollY > 320) {
+            logoContainer.style.width = '220px';
+            logo.style.width = '100%';
+          } else {
+            logoContainer.style.width = '320px';
+            logo.style.width = 'auto';
+          }
+        });*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario-style.css">   
+</head>
+<body>
+    <img src="img/virtual-sense-horizontal-logo-color.png" alt="Logo Color" class="logo">
+    <div class="form-container">
+        <form id="myForm" action="procesar_formulario.php" method="post">
+            <div class="form-group">
+                <label for="name">Nombre y Apellido:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company">Razón Social: <span class="optional">(opcional)</span></label>
+                <input type="text" id="company" name="company">
+            </div>
+
+            <div class="form-group">
+                <label for="idType">Tipo de identificación:</label>
+                <select id="idType" name="idType" required>
+                    <option value="">Seleccione...</option>
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="idNumber">Número de identificación:</label>
+                <input type="text" id="idNumber" name="idNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">Ciudad:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">País:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="website">Sitio Web: <span class="optional">(opcional)</span></label>
+                <input type="url" id="website" name="website">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-checkbox">
+                <label>Quiero saber más acerca de:</label>
+                <div class="checkbox-container">
+                    <div>
+                        <input type="checkbox" id="icc" name="pathologies" value="ICC">
+                        <label for="icc">ICC</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hta" name="pathologies" value="HTA">
+                        <label for="hta">HTA</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="epoc" name="pathologies" value="EPOC">
+                        <label for="epoc">EPOC</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="fa" name="pathologies" value="FA">
+                        <label for="fa">FA</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="dbt" name="pathologies" value="DBT">
+                        <label for="dbt">DBT</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

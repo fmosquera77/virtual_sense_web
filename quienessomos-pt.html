@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1-0, minimum-scale=1.0">
+  <title>Virtual Sense - Quem Somos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="top-navbar">
+    <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button-link">
+      <button class="button1">Portal do Paciente</button>
+    </a>
+    <a href="https://v2.virtualsense.com.ar/login" class="button-link">
+      <button class="button1">Portal do Médico</button>
+    </a>
+    <div class="language-icons">
+        <a href="quienessomos-en.html"><img src="img/icon-england.png" alt="EN" class="language-icons-img"></a>
+        <a href="quienessomos-es.html"><img src="img/icon-spain.png" alt="SP" class="language-icons-img"></a>      
+    </div>
+  </div>
+  <div class="header-contenedor">
+    <header id="cabecalho">
+      <div class="logo-contenedor">
+        <img src="img/virtual-sense-horizontal-logo.png" alt="Logo do Virtual Sense" class="logo">
+      </div>
+      <nav>
+        <a href="#" id="menu-icon"></a>
+        <ul>
+          <li><a href="index-pt.html">Início</a></li>
+          <li><a href="quienessomos-pt.html">Quem Somos</a></li>
+          <li><a href="telemonitoreo-pt.html">Telemonitoramento</a></li>
+          <li><a href="nuestrosproductos-pt.html">Nossos Produtos</a></li>
+          <li><a href="instituciones-pt.html">Instituições</a></li>
+          <li><a href="#">Canais de Venda</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <section class="quienessomos-head">
+    <div class="contenedor">
+      <h3 class="general-title">QUEM SOMOS</h3>
+    </div>
+  </section>
+  <section class="quienessomos-texto">
+    <div class="contenedor">
+      <p>Somos um grupo de profissionais Médicos, Engenheiros, Cientistas e Desenvolvedores de Software apaixonados
+        por
+        inovar no campo da saúde dia após dia, e criar soluções reais para os pacientes, os profissionais
+        médicos e para as instituições de saúde, tanto prestadoras quanto financiadoras do sistema.<br><br>
+        Estamos comprometidos em liderar a transformação na atenção médica, garantindo que a saúde esteja ao
+        alcance
+        de todos, a qualquer momento e lugar.</p>
+    </div>
+  </section>
+  <section class="blue1">
+    <div class="contenedor">
+      <div class="block">
+        <img src="img/medical-stethoscope-heart.png" alt="estetoscópio">
+      </div>
+      <div class="block">
+        <h2>Possibilitamos o acesso ao telemonitoramento da saúde</h2>
+        <p>+ Potenciamos o acesso ao telemonitoramento da saúde. <br><br>
+          + Reinventamos a experiência dos clientes do sistema de saúde,
+          criando soluções tecnológicas para a prevenção e o tratamento de diferentes condições.<br><br>
+          + Facilitamos a vida dos usuários e otimizamos a gestão dos diferentes atores envolvidos
+          no sistema de saúde, implementando e incorporando novas ferramentas digitais que melhoram
+          a qualidade e a expectativa de vida dos pacientes.</p>
+      </div>
+    </div>
+  </section>
+  <section class="tarjetas">
+    <div class="contenedor">
+      <h2>Nossa Equipe</h2>
+      <div class="articles">
+        <article>
+          <figure>
+            <img src="img/random-face.jpg" alt="Leandro Bergher">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>CEO Leandro Bergher</h2>
+            <p>Descrição do cargo.</p>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/random-face.jpg" alt="Daniel Setton">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>CFO Daniel Setton</h2>
+            <p>Descrição do cargo.</p>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/random-face.jpg" alt="Diego Weinstein">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>CTO Diego Weinstein</h2>
+            <p>Descrição do cargo.</p>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/random-fer.jpeg" alt="Fernando Mosquera">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>Coringa Sr. <br> Fernando Mosquera</h2>
+            <p>Faço de tudo! <br> Tenho todos os cargos!</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/+5491154991616" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+    <div class="tooltip">Precisa de ajuda?<br> Contate-nos!</div>
+  </a>
+
+  <footer>
+    <div class="foot">
+      <div class="logo">
+        <img src="img/virtual-sense-horizontal-logo-color.png" alt="Logo do Virtual Sense">
+      </div>
+      <nav>
+        <a href="https://wa.me/5491154991616">+54 911 5499-1616</a>
+        <a href="#">info@virtualsense.com.ar</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.getElementById('cabecalho');
+      if (window.scrollY > 60) {
+        header.classList.add('scroll');
+      } else {
+        header.classList.remove('scroll');
+      }
+    });
+
+    /*window.addEventListener('scroll', function () {
+      var header = document.getElementById('cabecalho');
+      var logoContainer = document.querySelector('.logo-contenedor');
+      var logo = document.querySelector('.logo');
+
+      if (window.scrollY > 320) {
+        logoContainer.style.width = '220px';
+        logo.style.width = '100%';
+      } else {
+        logoContainer.style.width = '320px';
+        logo.style.width = 'auto';
+      }
+    });*/
+  </script>
+</body>
+
+</html>
