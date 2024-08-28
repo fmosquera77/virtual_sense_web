@@ -48,6 +48,9 @@
   <section class="quees">
     <div class="contenedor">
       <div class="contenidoquees">
+        <div class="block">
+          <img src="img/telemonitoring-infographic.png" alt="Telemonitoreo" style="padding: 10% 30%;">
+        </div>
         <div class="textoquees">
           <h2>¿Qué es el telemonitoreo?</h2>
           <p>El monitoreo remoto de pacientes, dentro del ámbito de la telemedicina, implica el uso de
@@ -57,23 +60,23 @@
             presentes y con la posibilidad de hacerlo de manera asincrónica
           </p>
           <h2>Beneficios del Telemonitoreo</h2>
+          <ul>
+            <li>
+              <stro>Para el paciente:</stro> Mejora la cantidad y calidad de vida, se sienten más cuidados y más
+              contenidos.
+            </li>
+            <li>
+              <stro>Para el equipo de salud:</stro> Permite brindar un servicio innovador con efectividad comprobada
+              científicamente que posibilita llevar a cabo una buena práctica médica generando al
+              mismo tiempo nuevos ingresos.
+            </li>
+            <li>
+              <stro>Para el sistema y los financiadores:</stro> Reduce significativamente los costos y permite la
+              obtención de analíticas, métricas e información que contribuye a hacer más eficiente el
+              uso de los recursos.
+            </li>
+          </ul>
 
-          <p> o Para el paciente: Mejora la cantidad y calidad de vida, se sienten más cuidados y más
-            contenidos. <br><br>
-            o Para el equipo de salud: Permite brindar un servicio innovador con efectividad
-            comprobada
-            científicamente que posibilita llevar a cabo una buena práctica médica generando al
-            mismo
-            tiempo nuevos ingresos. <br><br>
-            o Para el sistema y los financiadores: Reduce significativamente los costos y permite la
-            obtención de analíticas, métricas e información que contribuye a hacer más eficiente el
-            uso
-            de los recursos. <br>
-          </p>
-
-        </div>
-        <div class="block">
-          <img src="img/telemonitoring-infographic.png" alt="Telemonitoreo" style="padding: 10% 30%;">
         </div>
       </div>
     </div>
@@ -85,13 +88,14 @@
   <section class="costos">
     <div class="contenedor">
       <div class="costos2">
-        <h2>Reducción de costos del sistema de salud</h2>
+        <h2>¿Hay evidencia clínica de su efectividad?</h2>
         <div class="content">
           <div class="textos">
-            <h3>¿Hay evidencia clínica de su efectividad?</h3>
-            <p>Desde hace ya varios años que se vienen publicando numerosos trabajos científicos que demuestran que el
-              Telemonitoreo permite mejorar la cantidad
-              y la calidad de vida de los pacientes con enfermedades crónicas reduciendo costos al sistema de salud.</p>
+            <p>Durante los últimos años, múltiples estudios científicos han demostrado que el telemonitoreo mejora tanto
+              la cantidad como la calidad de vida de los pacientes con enfermedades crónicas. Este enfoque no solo
+              facilita un manejo más eficaz de los síntomas y una mejor adherencia a los tratamientos, sino que también
+              reduce costos para el sistema de salud al disminuir la frecuencia de hospitalizaciones y la necesidad de
+              cuidados intensivos, consolidándose como una herramienta esencial tanto en términos de salud.</p>
             <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* The Impact of
               Telemonitoring on 30-day Readmissions for Patients
               Hospitalized with Heart Failure: A Safety-Net Hospital's Experience, Journal of Cardiac Failure, Volume
@@ -103,17 +107,17 @@
               data meta-analysis. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
           </div>
           <div class="barras">
-            <div class="59">
+            <div class="barras-59">
               <img src="img/59_.png" alt="Insuficiencia Cardíaca re Internaciones">
               <h4>Insuficiencia Cardíaca re Internaciones</h4>
               <h3 style="font-family: MontserratBold; font-size: 30px;">59%</h3>
             </div>
-            <div class="56">
+            <div class="barras-56">
               <img src="img/56_.png" alt="Hipertensión Arterial HTA Mal Controladas">
               <h4>Hipertensión Arterial HTA Mal Controladas</h4>
               <h3 style="font-family: MontserratBold; font-size: 30px;">56%</h3>
             </div>
-            <div class="30">
+            <div class="barras-30">
               <img src="img/30_.png" alt="Insuficiencia Cardíaca Mortalidad">
               <h4>Insuficiencia Cardíaca Mortalidad</h4>
               <h3 style="font-family: MontserratBold; font-size: 30px;">30%</h3>
@@ -149,7 +153,9 @@
           <p>Alarmas promedio diarias</p>
         </div>
         <div class="numeros">
-          <h4 class="counter" data-target="44">0%</h4>
+          <h4 class="counter-wrapper">
+            <span class="counter" data-target="44">0</span><span class="percent">%</span>
+          </h4>
           <p>Reducción de internaciones</p>
         </div>
       </div>
@@ -232,6 +238,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
   <script src="script.js" defer></script>
   <script>
+    
     window.addEventListener('scroll', function () {
       var header = document.getElementById('cabecalho');
       if (window.scrollY > 60) {
@@ -241,74 +248,94 @@
       }
     });
 
-    /*window.addEventListener('scroll', function () {
-        var header = document.getElementById('cabecalho');
-        var logoContainer = document.querySelector('.logo-contenedor');
-        var logo = document.querySelector('.logo');
+ //Visibilidad automatica del tooltip
 
-        if (window.scrollY > 320) {
-            logoContainer.style.width = '220px';
-            logo.style.width = '100%';
-        } else {
-            logoContainer.style.width = '320px';
-            logo.style.width = 'auto';
-        }
-    });*/
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
-    //Visibilidad automatica del tooltip
+  if (tooltip) {
+    // Función para mostrar el tooltip
+    function showTooltip() {
+      tooltip.classList.add('visible');
+      setTimeout(() => {
+        tooltip.classList.remove('visible');
+      }, 5000); // Tooltip visibility duration (5 seconds)
+    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
-      const whatsappFloat = document.querySelector('.whatsapp-float');
-      const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+    // Mostrar el tooltip solo una vez después de que la página se cargue
+    setTimeout(() => {
+      showTooltip();
 
-      if (tooltip) {
-        // Función para mostrar el tooltip
-        function showTooltip() {
-          tooltip.classList.add('visible');
-          setTimeout(() => {
-            tooltip.classList.remove('visible');
-          }, 2000); // Tooltip visibility duration (1.5 seconds)
-        }
-
-        // Mostrar el tooltip solo una vez después de que la página se cargue
-        setTimeout(showTooltip, 3000); // Mostrar tooltip después de 3 segundos
-      }
-    });
+      // Volver a mostrar el tooltip cada 1 minuto
+      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+  }
+});
 
     //Contador animado
-    document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 18; // Ajusta la velocidad del contador
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 18; // Ajusta la velocidad del contador
 
-    const updateCount = (counter) => {
+      const updateCount = (counter) => {
         const target = parseFloat(counter.getAttribute('data-target').replace(',', ''));
         let count = parseFloat(counter.innerText.replace(',', ''));
         const increment = target / speed;
 
         if (count < target) {
-            count = Math.min(count + increment, target);
-            counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
-            setTimeout(() => updateCount(counter), 20);
+          count = Math.min(count + increment, target);
+          counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
+          setTimeout(() => updateCount(counter), 20);
         } else {
-            counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
+          counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
         }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCount(entry.target);
+            observer.unobserve(entry.target); // Deja de observar una vez que se ha ejecutado el conteo
+          }
+        });
+      }, { threshold: 1 }); // Ajusta el umbral si es necesario
+
+      counters.forEach(counter => {
+        observer.observe(counter);
+      });
+    });
+
+    //--- Animación Porcentajes ---
+
+    /*document.addEventListener('DOMContentLoaded', function () {
+    const options = {
+        root: null, // viewport
+        rootMargin: '0px',
+        threshold: 0.1 // porcentaje de visibilidad
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                updateCount(entry.target);
-                observer.unobserve(entry.target); // Deja de observar una vez que se ha ejecutado el conteo
+                entry.target.classList.add('barras-animate');
+                observer.unobserve(entry.target); // Dejar de observar el elemento una vez que ha entrado en la vista
             }
         });
-    }, { threshold: 1}); // Ajusta el umbral si es necesario
+    }, options);
 
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
-});
-</script>
+    // Seleccionar los elementos a observar
+    document.querySelectorAll('.barras .barras-59, .barras .barras-56, .barras .barras-30')
+        .forEach(element => {
+            observer.observe(element);
+        });
+});*/
+
+
+
+  </script>
 
 
 </body>

@@ -45,28 +45,37 @@
             <h3 class="general-title">ABOUT US</h3>
         </div>
     </section>
-    <section class="quienessomos-texto">
+    <section class="white1">
         <div class="contenedor">
-            <p>We are a group of professionals: Doctors, Engineers, Scientists, and Software Developers passionate about
-                innovating in the healthcare field day by day and creating real solutions for patients, medical
-                professionals, and healthcare institutions, both providers and payers in the system.<br><br>
-                We are committed to leading the transformation in medical care, ensuring that health is accessible to
-                everyone, at any time and place.</p>
-        </div>
+            <div class="block">
+                <img src="img/quienessomos-1.jpg" alt="">
+            </div>
+            <div class="block">
+                <h2>About us?</h2>
+                <p>We are a group of professionals: Doctors, Engineers, Scientists, and Software Developers passionate
+                    about
+                    innovating in the healthcare field day by day and creating real solutions for patients, medical
+                    professionals, and healthcare institutions, both providers and payers in the system.<br><br>
+                    We are committed to leading the transformation in medical care, ensuring that health is accessible
+                    to
+                    everyone, at any time and place.</p>
+            </div>
     </section>
     <section class="blue1">
         <div class="contenedor">
             <div class="block">
-                <img src="img/medical-stethoscope-heart.png" alt="stethoscope">
+                <h2>We make remote health monitoring accessible</h2>
+                <ul>
+                    <li><strong>We enhance</strong> access to health telemonitoring.</li>
+                    <li><strong>We reinvent</strong>the experience of healthcare system clients, creating technological
+                        solutions for the prevention and treatment of various conditions.</li>
+                    <li><strong>We facilitate</strong> users lives and optimize the management of the different actors
+                        involved in the healthcare system by implementing and incorporating new digital tools that improve patients' quality and
+                        life expectancy.</li>
+                </ul>
             </div>
             <div class="block">
-                <h2>We make remote health monitoring accessible</h2>
-                <p>+ We empower access to remote health monitoring. <br><br>
-                    + We reinvent the experience of healthcare system clients, creating technological solutions for the
-                    prevention and treatment of different conditions.<br><br>
-                    + We facilitate the lives of users and optimize the management of the various actors involved in the
-                    healthcare system, implementing and incorporating new digital tools that improve the quality and
-                    life expectancy of patients.</p>
+                <img src="img/medical-stethoscope-heart.png" alt="stethoscope">
             </div>
         </div>
     </section>
@@ -161,6 +170,32 @@
             logo.style.width = 'auto';
           }
         });*/
+
+    //Visibilidad automatica del tooltip
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+
+  if (tooltip) {
+    // Función para mostrar el tooltip
+    function showTooltip() {
+      tooltip.classList.add('visible');
+      setTimeout(() => {
+        tooltip.classList.remove('visible');
+      }, 5000); // Tooltip visibility duration (5 seconds)
+    }
+
+    // Mostrar el tooltip solo una vez después de que la página se cargue
+    setTimeout(() => {
+      showTooltip();
+
+      // Volver a mostrar el tooltip cada 1 minuto
+      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+  }
+});
     </script>
 </body>
 

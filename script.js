@@ -195,13 +195,15 @@ document.addEventListener('DOMContentLoaded', () => {
       tooltip.classList.add('visible');
       setTimeout(() => {
         tooltip.classList.remove('visible');
-      }, 3000); // Tooltip visibility duration (1.5 seconds)
+      }, 5000); // Tooltip visibility duration (5 seconds)
     }
 
     // Mostrar el tooltip solo una vez después de que la página se cargue
-    setTimeout(showTooltip, 3000); // Mostrar tooltip después de 3 segundos
+    setTimeout(() => {
+      showTooltip();
+
+      // Volver a mostrar el tooltip cada 1 minuto
+      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
   }
 });
-
-
-

@@ -51,12 +51,17 @@
       <div class="contenidoquees">
         <div class="textoquees">
           <h2>What is Telemonitoring?</h2>
-          <p>Remote patient monitoring, within the scope of telemedicine, involves the use of medical devices and digital platforms to closely monitor patients' health from a distance. This technology allows healthcare professionals to detect changes early and take timely actions, without the need for patients to be physically present and with the possibility of doing so asynchronously.</p>
+          <p>Remote patient monitoring, within the scope of telemedicine, involves the use of medical devices and
+            digital platforms to closely monitor patients' health from a distance. This technology allows healthcare
+            professionals to detect changes early and take timely actions, without the need for patients to be
+            physically present and with the possibility of doing so asynchronously.</p>
           <h2>Benefits of Telemonitoring</h2>
 
           <p> o For the patient: Improves quality of life, makes them feel more cared for and supported. <br><br>
-            o For the healthcare team: Provides an innovative service with scientifically proven effectiveness that enables good medical practice while generating new revenue. <br><br>
-            o For the system and funders: Significantly reduces costs and provides analytics, metrics, and information that helps make resource use more efficient. <br>
+            o For the healthcare team: Provides an innovative service with scientifically proven effectiveness that
+            enables good medical practice while generating new revenue. <br><br>
+            o For the system and funders: Significantly reduces costs and provides analytics, metrics, and information
+            that helps make resource use more efficient. <br>
           </p>
 
         </div>
@@ -73,13 +78,21 @@
   <section class="costos">
     <div class="contenedor">
       <div class="costos2">
-        <h2>Reduction of Health System Costs</h2>
+        <h2>Is there clinical evidence of its effectiveness?</h2>
         <div class="content">
           <div class="textos">
-            <h3>Is there clinical evidence of its effectiveness?</h3>
-            <p>For several years now, numerous scientific papers have been published demonstrating that Telemonitoring improves the quantity and quality of life for patients with chronic diseases while reducing costs to the healthcare system.</p>
-            <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* The Impact of Telemonitoring on 30-day Readmissions for Patients Hospitalized with Heart Failure: A Safety-Net Hospital's Experience, Journal of Cardiac Failure, Volume 24, Issue 8, Supplement, 2018, Page S93.
-              **Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a randomised, controlled, parallel-group, unmasked trial. Lancet. 2018 Sep 22;392(10152):1047-1057. ***Self-monitoring of blood pressure in hypertension: a systematic review and individual patient data meta-analysis. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
+            <p>In recent years, multiple scientific studies have shown that telemonitoring improves both the quantity
+              and quality of life for patients with chronic diseases. This approach not only facilitates more effective
+              symptom management and better adherence to treatments but also reduces healthcare costs by decreasing the
+              frequency of hospitalizations and the need for intensive care, solidifying itself as an essential tool in
+              terms of health.</p>
+            <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* The Impact of
+              Telemonitoring on 30-day Readmissions for Patients Hospitalized with Heart Failure: A Safety-Net
+              Hospital's Experience, Journal of Cardiac Failure, Volume 24, Issue 8, Supplement, 2018, Page S93.
+              **Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a
+              randomised, controlled, parallel-group, unmasked trial. Lancet. 2018 Sep 22;392(10152):1047-1057.
+              ***Self-monitoring of blood pressure in hypertension: a systematic review and individual patient data
+              meta-analysis. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
           </div>
           <div class="barras">
             <div class="59">
@@ -128,8 +141,10 @@
           <p>Average daily alarms</p>
         </div>
         <div class="numeros">
-          <h4 class="counter" data-target="44">0%</h4>
-          <p>Reduction in hospitalizations</p>
+          <h4 class="counter-wrapper">
+            <span class="counter" data-target="44">0</span><span class="percent">%</span>
+          </h4>
+          <p>Reducción de internaciones</p>
         </div>
       </div>
     </div>
@@ -219,60 +234,65 @@
       }
     });
 
-    // Tooltip automatic visibility
+    //Visibilidad automatica del tooltip
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Select the tooltip inside the .whatsapp-float container
+      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Function to show the tooltip
+        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 2000); // Tooltip visibility duration (2 seconds)
+          }, 5000); // Tooltip visibility duration (5 seconds)
         }
 
-        // Show the tooltip only once after the page loads
-        setTimeout(showTooltip, 3000); // Show tooltip after 3 seconds
+        // Mostrar el tooltip solo una vez después de que la página se cargue
+        setTimeout(() => {
+          showTooltip();
+
+          // Volver a mostrar el tooltip cada 1 minuto
+          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
       }
     });
 
     // Animated counter
-    document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 18; // Adjust the counter speed
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 18; // Adjust the counter speed
 
-    const updateCount = (counter) => {
+      const updateCount = (counter) => {
         const target = parseFloat(counter.getAttribute('data-target').replace(',', ''));
         let count = parseFloat(counter.innerText.replace(',', ''));
         const increment = target / speed;
 
         if (count < target) {
-            count = Math.min(count + increment, target);
-            counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
-            setTimeout(() => updateCount(counter), 20);
+          count = Math.min(count + increment, target);
+          counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
+          setTimeout(() => updateCount(counter), 20);
         } else {
-            counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
+          counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
         }
-    };
+      };
 
-    const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                updateCount(entry.target);
-                observer.unobserve(entry.target); // Stop observing once counting is done
-            }
+          if (entry.isIntersecting) {
+            updateCount(entry.target);
+            observer.unobserve(entry.target); // Stop observing once counting is done
+          }
         });
-    }, { threshold: 1}); // Adjust threshold if necessary
+      }, { threshold: 1 }); // Adjust threshold if necessary
 
-    counters.forEach(counter => {
+      counters.forEach(counter => {
         observer.observe(counter);
+      });
     });
-});
-</script>
+  </script>
 
 </body>
 

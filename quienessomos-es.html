@@ -45,30 +45,36 @@
       <h3 class="general-title">QUIÉNES SOMOS</h3>
     </div>
   </section>
-  <section class="quienessomos-texto">
+  <section class="white1">
     <div class="contenedor">
-      <p>Somos un grupo de profesionales Médicos, Ingenieros, Científicos y Desarrolladores de Software apasionados
-        por
-        innovar en el ámbito de la salud día a día, y crear soluciones reales para los pacientes, los profesionales
-        médicos y para las instituciones de salud, tanto prestadoras como financiadoras del sistema.<br><br>
-        Estamos comprometidos a liderar la transformación en la atención médica, asegurando que la salud esté al
-        alcance
-        de todos, en cualquier momento y lugar.</p>
+      <div class="block">
+        <img src="img/quienessomos-1.jpg" alt="">
+      </div>
+      <div class="block">
+        <h2>Quienes somos?</h2>
+        <p>Somos un grupo de profesionales Médicos, Ingenieros, Científicos y Desarrolladores de Software apasionados
+          por innovar en el ámbito de la salud día a día, y crear soluciones reales para los pacientes, los profesionales
+          médicos y para las instituciones de salud, tanto prestadoras como financiadoras del sistema.<br><br>
+          Estamos comprometidos a liderar la transformación en la atención médica, asegurando que la salud esté al
+          alcance de todos, en cualquier momento y lugar.</p>
+      </div>
     </div>
   </section>
   <section class="blue1">
-    <div class="contenedor">
-      <div class="block">
-        <img src="img/medical-stethoscope-heart.png" alt="estetoscopio">
-      </div>
+    <div class="contenedor">  
       <div class="block">
         <h2>Hacemos posible el acceso al telemonitoreo de la salud</h2>
-        <p>+ Potenciamos el acceso al telemonitoreo de la salud. <br><br>
-          + Reinventamos la experiencia de los clientes del sistema de salud,
-          creando soluciones tecnológicas para la prevención y el tratamiento de diferentes afecciones.<br><br>
-          + Facilitamos la vida de los usuarios y optimizamos la gestión de los distintos actores involucrados
-          en el sistema de salud, implementando e incorporando nuevas herramientas digitales que mejoran
-          la calidad y expectativa de vida de los pacientes.</p>
+        <ul>
+          <li><strong>Potenciamos</strong> el acceso al telemonitoreo de la salud. </li>
+          <li><strong>Reinventamos</strong> la experiencia de los clientes del sistema de salud, creando soluciones tecnológicas para la
+            prevención y el tratamiento de diferentes afecciones.</li>
+          <li><strong>Facilitamos</strong> la vida de los usuarios y optimizamos la gestión de los distintos actores involucrados
+            en el sistema de salud, implementando e incorporando nuevas herramientas digitales que mejoran
+            la calidad y expectativa de vida de los pacientes.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <img src="img/medical-stethoscope-heart.png" alt="estetoscopio">
       </div>
     </div>
   </section>
@@ -78,42 +84,65 @@
       <div class="articles">
         <article>
           <figure>
-            <img src="img/random-face.jpg" alt="Leandro Bergher">
+            <img src="img/lea-ceo.jpg" alt="Leandro Bergher">
           </figure>
           <div class="article-preview">
             <hr>
             <h2>CEO Leandro Bergher</h2>
-            <p>Descripcion del puesto.</p>
           </div>
         </article>
         <article>
           <figure>
-            <img src="img/random-face.jpg" alt="Daniel Setton">
+            <img src="img/dani-cfo.jpg" alt="Daniel Setton">
           </figure>
           <div class="article-preview">
             <hr>
             <h2>CFO Daniel Setton</h2>
-            <p>Descripcion del puesto.</p>
           </div>
         </article>
         <article>
           <figure>
-            <img src="img/random-face.jpg" alt="Diego Weinstein">
+            <img src="img/diego-cto_1.jpg" alt="Diego Weinstein">
           </figure>
           <div class="article-preview">
             <hr>
             <h2>CTO Diego Weinstein</h2>
-            <p>Descripcion del puesto.</p>
           </div>
         </article>
         <article>
           <figure>
-            <img src="img/random-fer.jpeg" alt="Fernando Mosquera">
+            <img src="img/sergio-po.jpg" alt="Sergio Liberczuck">
           </figure>
           <div class="article-preview">
             <hr>
-            <h2>Comodin Sr. <br> Fernando Mosquera</h2>
-            <p>Hago de todo LPM! <br>Tengo todos los puestos!. </p>
+            <h2>SPM Sergio Liberczuck</h2>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/fer-pmo.png" alt="Fernando Mosquera">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>PMO Fernando Mosquera</h2>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/yael-qa.jpg" alt="Yael Navarro">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>QA Yael Navarro</h2>
+          </div>
+        </article>
+        <article>
+          <figure>
+            <img src="img/javi-advisor.png" alt="Dr. Javier Parysow">
+          </figure>
+          <div class="article-preview">
+            <hr>
+            <h2>SLM Javier Parysow</h2>
           </div>
         </article>
       </div>
@@ -162,6 +191,32 @@
         logo.style.width = 'auto';
       }
     });*/
+
+    //Visibilidad automatica del tooltip
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+
+  if (tooltip) {
+    // Función para mostrar el tooltip
+    function showTooltip() {
+      tooltip.classList.add('visible');
+      setTimeout(() => {
+        tooltip.classList.remove('visible');
+      }, 5000); // Tooltip visibility duration (5 seconds)
+    }
+
+    // Mostrar el tooltip solo una vez después de que la página se cargue
+    setTimeout(() => {
+      showTooltip();
+
+      // Volver a mostrar el tooltip cada 1 minuto
+      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+  }
+});
   </script>
 </body>
 

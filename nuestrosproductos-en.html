@@ -40,7 +40,7 @@
       </nav>
     </header>
   </div>
-  <section class="telemonitoreo-head">
+  <section class="nuestrosproductos-head">
     <div class="contenedor">
       <h3 class="general-title">
         <Nav>OUR PRODUCTS</Nav>
@@ -60,12 +60,13 @@
       </div>
       <div class="block">
         <h2>Heart Failure</h2>
-        <p> "Our digital platform for monitoring heart failure includes an app for patients that allows them to track
+        <p>Our digital platform for monitoring heart failure includes an app for patients that allows them to track
           their condition daily, as well as a dashboard for the healthcare team that facilitates monitoring, alarm
-          management, and early intervention."</p>
-        <p> Benefits: "We reduce hospital readmission rates by 45% and cardiovascular mortality through continuous
+          management, and early intervention.</p>
+          <h3>Benefits</h3>
+        <p>We reduce hospital readmission rates by 45% and cardiovascular mortality through continuous
           monitoring based on the best available scientific evidence. Additionally, we reduce associated pathology
-          costs by more than 65%."</p>
+          costs by more than 65%.</p>
       </div>
     </div>
   </section>
@@ -73,15 +74,16 @@
     <div class="contenedor">
       <div class="block">
         <h2>Hypertension</h2>
-        <p> "Our digital platform for hypertension includes an app for patients that allows them to record and
+        <p>Our digital platform for hypertension includes an app for patients that allows them to record and
           monitor their blood pressure through a 7-day protocol with 4 daily pressure readings in accordance with the
           MDPA (Home Blood Pressure Monitoring) protocol. On the medical side, we provide a dashboard that offers
-          real-time data, alerts for timely interventions, and comprehensive reports that enable correct titration."
-           Benefits: "We increase the percentage of well-controlled patients by 30%, improving their quality of life
+          real-time data, alerts for timely interventions, and comprehensive reports that enable correct titration."</p>
+          <h3>Benefits</h3>
+          <p>We increase the percentage of well-controlled patients by 30%, improving their quality of life
           and reducing complications."</p>
       </div>
       <div class="block">
-        <img src="img/img-nueestrosproductos-1.jpg" alt="estetoscopio">
+        <img src="img/img-nueestrosproductos-1.png" alt="estetoscopio">
       </div>
     </div>
   </section>
@@ -92,10 +94,11 @@
       </div>
       <div class="block">
         <H2>COPD</H2>
-        <P> "Our platform for COPD includes a specific app for patients that allows them to monitor their inspiratory
+        <P>Our platform for COPD includes a specific app for patients that allows them to monitor their inspiratory
           flow, oxygenation, and symptoms, and a platform for the healthcare team that facilitates the monitoring and
-          management of chronic disease throughout its cycle."
-           Benefits: "We improve the quality of life of patients and reduce readmissions through continuous
+          management of chronic disease throughout its cycle.</p>
+          <h3>Benefits</h3> 
+          <p>We improve the quality of life of patients and reduce readmissions through continuous
           monitoring of the pathology."</P>
       </div>
     </div>
@@ -107,9 +110,10 @@
         <p>Our platform for atrial fibrillation (AF) includes a one-channel electrocardiograph (ECG) linked to the
           patient's mobile app, which contains Artificial Intelligence-based algorithms that detect ectopic beats and
           the AF condition with high sensitivity and specificity. The platform for the healthcare team allows viewing
-          of tracings and detections for continuous and personalized follow-up."
-           Benefits: "We increase the percentage of patients receiving comprehensive care, resulting in a significant
-          reduction in emergency visits and hospitalizations."</p>
+          of tracings and detections for continuous and personalized follow-up.</p>
+          <h3>Benefits</h3>
+          <p>We increase the percentage of patients receiving comprehensive care, resulting in a significant
+          reduction in emergency visits and hospitalizations.</p>
       </div>
       <div class="block">
         <img src="img/img-section-2.png" alt="estetoscopio">
@@ -119,18 +123,19 @@
   <section class="white1">
     <div class="contenedor">
       <div class="block">
+        <img src="img/img-nueestrosproductos-2.png" alt="imagen-nuestrosproductos-1">
+      </div>
+      <div class="block">
         <H2>Diabetes</H2>
-        <P> "Our platform for Diabetes includes a glucometer linked to the patient's mobile app, which contains
+        <P>Our platform for Diabetes includes a glucometer linked to the patient's mobile app, which contains
           Artificial Intelligence-based algorithms that detect with high sensitivity the upward or downward trends in
           the patient's blood glucose levels. The platform for the healthcare team allows viewing glucose curves with
           ingestion events marked on them. Additionally, it features a computer vision module capable of detecting the
-          chemical composition of the food the patient is consuming."
-           Benefits: "We increase the percentage of patients maintaining their glucose levels within limits,
-          resulting in a significant reduction in emergency visits and hospitalizations."</P>
-      </div>
-      <div class="block">
-        <img src="img/img-nueestrosproductos-2.jpg" alt="imagen-nuestrosproductos-1">
-      </div>
+          chemical composition of the food the patient is consuming.</p>
+          <h3>Benefits</h3>
+          <p>We increase the percentage of patients maintaining their glucose levels within limits,
+          resulting in a significant reduction in emergency visits and hospitalizations.</P>
+      </div>      
     </div>
   </section>
 
@@ -218,6 +223,32 @@
         logo.style.width = 'auto';
       }
     });*/
+
+     //Visibilidad automatica del tooltip
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+
+  if (tooltip) {
+    // Función para mostrar el tooltip
+    function showTooltip() {
+      tooltip.classList.add('visible');
+      setTimeout(() => {
+        tooltip.classList.remove('visible');
+      }, 5000); // Tooltip visibility duration (5 seconds)
+    }
+
+    // Mostrar el tooltip solo una vez después de que la página se cargue
+    setTimeout(() => {
+      showTooltip();
+
+      // Volver a mostrar el tooltip cada 1 minuto
+      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+  }
+});
   </script>
 </body>
 

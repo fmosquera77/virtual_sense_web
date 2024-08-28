@@ -11,15 +11,14 @@
 
 <body>
   <div class="top-navbar">
-    <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button-link">
-      <button class="button1">Portal Paciente</button>
-    </a>
-    <a href="https://v2.virtualsense.com.ar/login" class="button-link">
-      <button class="button1">Portal Médico</button>
-    </a>
+    <div class="top-navbar-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button1">Portal do
+        Paciente</a>
+      <a href="https://v2.virtualsense.com.ar/login" class="button1">Portal do Médico</a>
+    </div>
     <div class="language-icons">
       <a href="telemonitoreo-en.html"><img src="img/icon-england.png" alt="EN" class="language-icons-img"></a>
-        <a href="telemonitoreo-es.html"><img src="img/icon-spain.png" alt="ES" class="language-icons-img"></a>
+      <a href="telemonitoreo-es.html"><img src="img/icon-spain.png" alt="ES" class="language-icons-img"></a>
     </div>
   </div>
   <div class="header-contenedor">
@@ -49,7 +48,7 @@
     <div class="contenedor">
       <div class="contenidoquees">
         <div class="textoquees">
-          <h2>O que é o telemonitoramento?</h2>
+          <h2>O que é o Telemonitoramento?</h2>
           <p>O monitoramento remoto de pacientes, no âmbito da telemedicina, envolve o uso de dispositivos médicos e
             plataformas digitais para acompanhar de perto a saúde dos pacientes à distância. Esta tecnologia permite
             que os profissionais de saúde detectem mudanças precoces e tomem ações oportunas, sem a necessidade de que
@@ -75,25 +74,30 @@
   </section>
   <section class="monitoreo-remoto">
     <div class="contenedor">
-      <h2>evidência científica</h2>
+      <h2>Evidência Científica</h2>
     </div>
   </section>
   <section class="costos">
     <div class="contenedor">
       <div class="costos2">
-        <h2>Redução de custos do sistema de saúde</h2>
+        <h2>Há evidências clínicas de sua eficácia?</h2>
         <div class="content">
           <div class="textos">
-            <h3>Há evidências clínicas de sua eficácia?</h3>
-            <p>Há vários anos, muitos trabalhos científicos têm demonstrado que o Telemonitoramento melhora a quantidade
-              e a qualidade de vida dos pacientes com doenças crônicas, reduzindo custos para o sistema de saúde.</p>
+            <p>Nos últimos anos, vários estudos científicos demonstraram que o telemonitoramento melhora tanto a
+              quantidade quanto a qualidade de vida dos pacientes com doenças crônicas. Essa abordagem não apenas
+              facilita um manejo mais eficaz dos sintomas e uma melhor adesão aos tratamentos, mas também reduz custos
+              para o sistema de saúde ao diminuir a frequência de hospitalizações e a necessidade de cuidados
+              intensivos, consolidando-se como uma ferramenta essencial em termos de saúde.</p>
             <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* O Impacto do
               Telemonitoramento nas Readmissões em 30 dias para Pacientes Hospitalizados com Insuficiência Cardíaca: A
-              Experiência de um Hospital de Segurança, Journal of Cardiac Failure, Volume 24, Edição 8, Suplemento, 2018,
+              Experiência de um Hospital de Segurança, Journal of Cardiac Failure, Volume 24, Edição 8, Suplemento,
+              2018,
               Página S93. ** Eficácia do gerenciamento telemédico em pacientes com insuficiência cardíaca (TIM-HF2): um
-              ensaio clínico randomizado, controlado, em grupos paralelos e sem máscara. Lancet . 22 de setembro de 2018;
+              ensaio clínico randomizado, controlado, em grupos paralelos e sem máscara. Lancet . 22 de setembro de
+              2018;
               392(10152):1047-1057. *** Auto-monitoramento da pressão arterial na hipertensão: uma revisão sistemática e
-              meta-análise de dados individuais de pacientes. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
+              meta-análise de dados individuais de pacientes. PLoS Med. (2017) 14:e1002389. doi:
+              10.1371/journal.pmed.1002389</p>
           </div>
           <div class="barras">
             <div class="59">
@@ -120,7 +124,7 @@
     <h2>Nossa Experiência</h2>
     <h3>Fontes obtidas em teste realizado com a <br>plataforma do Virtual Sense em pacientes reais</h3>
     <div class="contenedor-experiencia">
-      <div class="dados">
+      <div class="datos">
         <div class="numeros">
           <h4 class="counter" data-target="120">0</h4>
           <p>Pacientes utilizaram a plataforma</p>
@@ -142,8 +146,10 @@
           <p>Alarmes diários</p>
         </div>
         <div class="numeros">
-          <h4 class="counter" data-target="44">0%</h4>
-          <p>Redução de internações</p>
+          <h4 class="counter-wrapper">
+            <span class="counter" data-target="44">0</span><span class="percent">%</span>
+          </h4>
+          <p>Reducción de internaciones</p>
         </div>
       </div>
     </div>
@@ -233,59 +239,65 @@
       }
     });
 
-    //Visibilidade automática do tooltip
+    //Visibilidad automatica del tooltip
+
     document.addEventListener('DOMContentLoaded', () => {
-      // Selecionamos o tooltip dentro do contêiner .whatsapp-float
+      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Função para mostrar o tooltip
+        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 2000); // Duração da visibilidade do tooltip (1,5 segundos)
+          }, 5000); // Tooltip visibility duration (5 seconds)
         }
 
-        // Mostrar o tooltip apenas uma vez após o carregamento da página
-        setTimeout(showTooltip, 3000); // Mostrar tooltip após 3 segundos
+        // Mostrar el tooltip solo una vez después de que la página se cargue
+        setTimeout(() => {
+          showTooltip();
+
+          // Volver a mostrar el tooltip cada 1 minuto
+          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
       }
     });
 
     //Contador animado
-    document.addEventListener("DOMContentLoaded", function() {
-    const counters = document.querySelectorAll('.counter');
-    const speed = 18; // Ajusta a velocidade do contador
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 18; // Ajusta a velocidade do contador
 
-    const updateCount = (counter) => {
+      const updateCount = (counter) => {
         const target = parseFloat(counter.getAttribute('data-target').replace(',', ''));
         let count = parseFloat(counter.innerText.replace(',', ''));
         const increment = target / speed;
 
         if (count < target) {
-            count = Math.min(count + increment, target);
-            counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
-            setTimeout(() => updateCount(counter), 20);
+          count = Math.min(count + increment, target);
+          counter.innerText = target % 1 === 0 ? Math.floor(count) : count.toFixed(2);
+          setTimeout(() => updateCount(counter), 20);
         } else {
-            counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
+          counter.innerText = target % 1 === 0 ? Math.floor(target) : target.toFixed(2);
         }
-    };
+      };
 
-    const observer = new IntersectionObserver((entries) => {
+      const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                updateCount(entry.target);
-                observer.unobserve(entry.target); // Para de observar uma vez que o contador tenha sido executado
-            }
+          if (entry.isIntersecting) {
+            updateCount(entry.target);
+            observer.unobserve(entry.target); // Para de observar uma vez que o contador tenha sido executado
+          }
         });
-    }, { threshold: 1}); // Ajusta o limiar se necessário
+      }, { threshold: 1 }); // Ajusta o limiar se necessário
 
-    counters.forEach(counter => {
+      counters.forEach(counter => {
         observer.observe(counter);
+      });
     });
-});
-</script>
+  </script>
 
 </body>
 
