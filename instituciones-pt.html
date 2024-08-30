@@ -12,12 +12,13 @@
 <body>
   <div class="top-navbar">
     <div class="top-navbar-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button1">Portal do Paciente</a>
+      <a href="https://play.google.com/store/apps/details?id=com.virtualsense.pacientes" class="button1">Portal do
+        Paciente</a>
       <a href="https://v2.virtualsense.com.ar/login" class="button1">Portal do Médico</a>
     </div>
     <div class="language-icons">
-      <a href="index-en.html"><img src="img/icon-england.png" alt="EN" class="language-icons-img"></a>
-      <a href="index-es.html"><img src="img/icon-spain.png" alt="ES" class="language-icons-img"></a>
+      <a href="instituciones-en.html"><img src="img/icon-england.png" alt="EN" class="language-icons-img"></a>
+      <a href="instituciones-es.html"><img src="img/icon-spain.png" alt="ES" class="language-icons-img"></a>
     </div>
   </div>
   </div>
@@ -34,7 +35,7 @@
           <li><a href="telemonitoreo-pt.html">Telemonitoramento</a></li>
           <li><a href="nuestrosproductos-pt.html">Nossos Produtos</a></li>
           <li><a href="instituciones-pt.html">Instituições</a></li>
-          <li><a href="#">Canais de Venda</a></li>
+          <li><a href="formulario-pt.html">Contate-nos</a></li>
         </ul>
       </nav>
     </header>
@@ -48,17 +49,48 @@
     <div class="contenedor">
       <h2>As Instituições associadas ao Virtual Sense oferecem:</h2>
       <ul>
-        <li><strong>Atendimento remoto</strong> em sintonia com as novas demandas dos pacientes, com foco na
-          prevenção.</li><br>
-        <li><strong> Monitoramento diário</strong> em tempo real que alimenta um histórico de eventos por paciente.</li>
+        <li><strong>Atendimento remoto</strong> alinhado às novas demandas dos pacientes, com foco na prevenção.</li>
         <br>
-        <li>Incentivo para o cumprimento da <strong>dieta e medicação.</strong></li><br>
+        <li><strong> Monitoramento diário</strong> em tempo real que constrói um histórico detalhado de eventos para cada paciente.</li>
+        <br>
+        <li>Incentivo ao cumprimento <strong> de dietas e medicação.</strong></li><br>
         <li><strong>Detecção precoce de sintomas suspeitos</strong>, alterações nos sinais vitais.</li><br>
-        <li><strong> Precisão do diagnóstico</strong> por utilização de parâmetros médicos baseados em evidências
-          científicas.</li><br>
-        <li> Provisão de <strong>respostas imediatas e focadas</strong> em situações específicas.</li><br>
-        <li><strong>Quebra</strong> das barreiras de espaço e tempo.</li><br>
+        <li><strong>Precisão diagnóstica </strong>por meio de parâmetros médicos baseados em evidências científicas.</li><br>
+        <li><strong>Respostas imediatas e focadas</strong> para situações específicas.</li><br>
+        <li><strong>Superação </strong> das barreiras de espaço e tempo.</li><br>
       </ul>
+      <h2>Algumas instituições que<strong>confiam em nós</strong></h2>
+
+      <!-- carrousel de imagenes -->
+
+      <div class="cajainstituciones">
+        <div class="slide-track">
+          <div class="institucion">
+            <img src="img/HPR.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/ICBA.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/cardio-patagonia.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/INCAE.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/centro-medico-cardio-vital.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/Evermed.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/Sadosky.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/integrando-salud.png" height="200" width="250" alt="" />
+          </div>
+        </div>
+      </div>
       <h2 style="margin-top:50px; font-family: BwModelicaSS02;
           margin-bottom: 50px;">Temos presença em:</h2>
 
@@ -122,31 +154,47 @@
       }
     });*/
 
-     //Visibilidad automatica del tooltip
+    //Visibilidad automatica del tooltip
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
-  const whatsappFloat = document.querySelector('.whatsapp-float');
-  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+      const whatsappFloat = document.querySelector('.whatsapp-float');
+      const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
-  if (tooltip) {
-    // Función para mostrar el tooltip
-    function showTooltip() {
-      tooltip.classList.add('visible');
-      setTimeout(() => {
-        tooltip.classList.remove('visible');
-      }, 5000); // Tooltip visibility duration (5 seconds)
-    }
+      if (tooltip) {
+        // Función para mostrar el tooltip
+        function showTooltip() {
+          tooltip.classList.add('visible');
+          setTimeout(() => {
+            tooltip.classList.remove('visible');
+          }, 5000); // Tooltip visibility duration (5 seconds)
+        }
 
-    // Mostrar el tooltip solo una vez después de que la página se cargue
-    setTimeout(() => {
-      showTooltip();
+        // Mostrar el tooltip solo una vez después de que la página se cargue
+        setTimeout(() => {
+          showTooltip();
 
-      // Volver a mostrar el tooltip cada 1 minuto
-      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
-  }
-});
+          // Volver a mostrar el tooltip cada 1 minuto
+          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+      }
+    });
+
+    // ----Carrousel -----
+    document.addEventListener("DOMContentLoaded", function () {
+      const slideTrack = document.querySelector('.slide-track');
+      const slides = Array.from(slideTrack.children);
+      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      // Clone the slides
+      slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        slideTrack.appendChild(clone);
+      });
+
+      // Adjust the slide track width
+      slideTrack.style.width = `${slideWidth * slides.length * 2}px`;
+    });
   </script>
 </body>
 

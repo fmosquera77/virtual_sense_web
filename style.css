@@ -362,7 +362,7 @@ body {
 
 .quienessomos .contenedor .block img {
     margin: auto;
-    width: 75%;
+    width: 100%;
     padding: 50px;
 }
 
@@ -409,6 +409,8 @@ body {
     vertical-align: top;
     padding: 0 20px;
 }
+
+
 
 
 
@@ -693,12 +695,12 @@ body {
 #mecanismos {
     display: flex;
     flex-direction: wrap;
-    gap: 20px; 
+    gap: 20px;
 }
 
 #mecanismos img {
     width: 100%;
-    
+
     box-sizing: border-box;
 }
 
@@ -788,7 +790,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     max-width: 550px;
-    
+
 }
 
 .barras>div {
@@ -852,7 +854,7 @@ footer a:hover {
 /*--- --- --- PAGINA QUIÉNES SOMOS --- --- ---*/
 
 .quienessomos-head {
-    background-image: url(img/who-we-are-banner.png);
+    background-image: url(img/who-we-are-banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -892,7 +894,7 @@ footer a:hover {
 
 /*--- --- --- PAGINA TELEMONITOREO --- --- ---*/
 .telemonitoreo-head {
-    background-image: url(img/telemonitoring-banner.png);
+    background-image: url(img/telemonitoring-banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1089,7 +1091,7 @@ footer a:hover {
 /*--- --- --- PAGINA NUESTROS PRODUCTOS --- --- ---*/
 
 .nuestrosproductos-head {
-    background-image: url(img/nuestros-productos-banner-modified.png);
+    background-image: url(img/nuestros-productos-banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1220,39 +1222,22 @@ footer a:hover {
 .mecanismo {
     position: relative;
     display: inline-block;
-    overflow: hidden; /* Evita el desbordamiento */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+    overflow: hidden;
+    /* Evita el desbordamiento */
+    box-sizing: border-box;
+    /* Incluye padding y borde en el tamaño total */
 }
 
 .mecanismo img {
     width: 100%;
     display: block;
-    box-sizing: border-box; /* Asegura que el padding y borde estén incluidos en el tamaño total */
+    box-sizing: border-box;
+    /* Asegura que el padding y borde estén incluidos en el tamaño total */
 }
 
-.mecanismo .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0); /* Transpente por defecto */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: background 0.3s, opacity 0.3s;
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: 100%; /* Ajusta la altura al 100% del contenedor */
-    border-radius: 22px; /* Asegura que el borde sea consistente */
-    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
-    padding: 0; /* Elimina padding si hay */
-    margin: 0; /* Elimina márgenes */
-    transform: scale(1);
-}
-
-.mecanismo:hover .overlay {
-    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro al hacer hover */
-    opacity: 1; /* Hacer visible el overlay */
+.alt-text{
+    display: block;
+    margin-top: 10px;
 }
 
 
@@ -1325,7 +1310,7 @@ footer a:hover {
 }
 
 .instituciones-head {
-    background-image: url(img/institutions.png);
+    background-image: url(img/institutions.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1338,9 +1323,6 @@ footer a:hover {
 
 }
 
-.instituciones-texto {
-    margin: 50px 0;
-}
 
 .instituciones-texto h2 {
     font-family: BwModelicaSS02;
@@ -1348,49 +1330,31 @@ footer a:hover {
     color: #EB8588;
     font-size: 32px;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 /*--- --- --- CARROUSEL DE IMAGENES --- --- ---*/
 .cajainstituciones {
     margin-top: 20px;
     background: white;
-    height: 100px;
+    height: 200px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: 960px;
 }
 
-.cajainstituciones::before,
-.cajainstituciones::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.cajainstituciones::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-
-.cajainstituciones::before {
-    left: 0;
-    top: 0;
-}
 
 .slide-track {
-    animation: scroll 40s linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 8);
+    /* Width of each image * number of images */
+    animation: scroll 30s linear infinite;
 }
 
 .institucion {
-    height: 100px;
-    width: 250px;
+    flex: 0 0 250px;
+    /* Width of each image */
 }
 
 @keyframes scroll {
@@ -1399,7 +1363,7 @@ footer a:hover {
     }
 
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(-50%);
     }
 }
 
@@ -1812,7 +1776,7 @@ footer a:hover {
         order: 1;
     }
 
-    
+
 
     /* FIN INDEX-Blue2 responsive*/
 
@@ -1889,6 +1853,10 @@ footer a:hover {
 
     /* TELEMONITOREO responsive */
     /* TELEMONITOREO-Quees responsive*/
+
+    .telemonitoreo-head h3 {
+        font-size: 25px !important;
+    }
     .quees {
         padding: 25px;
     }

@@ -35,7 +35,7 @@
           <li><a href="telemonitoreo-en.html">Remote Monitoring</a></li>
           <li><a href="nuestrosproductos-en.html">Our Products</a></li>
           <li><a href="instituciones-en.html">Institutions</a></li>
-          <li><a href="#">Sales Channels</a></li>
+          <li><a href="formulario-en.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -57,6 +57,39 @@
         <li>Provision of <strong>immediate and focused responses</strong> in specific situations.</li><br>
         <li><strong>Breaking down</strong> barriers of space and time.</li><br>
       </ul>
+      <h2>Some institutions that<strong> trust us </strong></h2>
+
+      <!-- carrousel de imagenes -->
+
+      <div class="cajainstituciones">
+        <div class="slide-track">
+          <div class="institucion">
+            <img src="img/HPR.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/ICBA.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/cardio-patagonia.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/INCAE.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/centro-medico-cardio-vital.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/Evermed.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/Sadosky.png" height="200" width="250" alt="" />
+          </div>
+          <div class="institucion">
+            <img src="img/integrando-salud.png" height="200" width="250" alt="" />
+          </div>
+        </div>
+      </div>
+
       <h2 style="margin-top:50px; font-family: BwModelicaSS02;
           margin-bottom: 50px;">We have a presence in:</h2>
 
@@ -144,6 +177,23 @@
           setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
         }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
       }
+    });
+
+    // ----Carrousel -----
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const slideTrack = document.querySelector('.slide-track');
+      const slides = Array.from(slideTrack.children);
+      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      // Clone the slides
+      slides.forEach(slide => {
+        const clone = slide.cloneNode(true);
+        slideTrack.appendChild(clone);
+      });
+
+      // Adjust the slide track width
+      slideTrack.style.width = `${slideWidth * slides.length * 2}px`;
     });
   </script>
 </body>

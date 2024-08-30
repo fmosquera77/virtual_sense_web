@@ -35,7 +35,7 @@
           <li><a href="telemonitoreo-en.html">Telemonitoring</a></li>
           <li><a href="nuestrosproductos-en.html">Our Products</a></li>
           <li><a href="instituciones-en.html">Institutions</a></li>
-          <li><a href="#">Sales Channels</a></li>
+          <li><a href="formulario-en.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -63,7 +63,7 @@
         <p>Our digital platform for monitoring heart failure includes an app for patients that allows them to track
           their condition daily, as well as a dashboard for the healthcare team that facilitates monitoring, alarm
           management, and early intervention.</p>
-          <h3>Benefits</h3>
+        <h3>Benefits</h3>
         <p>We reduce hospital readmission rates by 45% and cardiovascular mortality through continuous
           monitoring based on the best available scientific evidence. Additionally, we reduce associated pathology
           costs by more than 65%.</p>
@@ -78,8 +78,8 @@
           monitor their blood pressure through a 7-day protocol with 4 daily pressure readings in accordance with the
           MDPA (Home Blood Pressure Monitoring) protocol. On the medical side, we provide a dashboard that offers
           real-time data, alerts for timely interventions, and comprehensive reports that enable correct titration."</p>
-          <h3>Benefits</h3>
-          <p>We increase the percentage of well-controlled patients by 30%, improving their quality of life
+        <h3>Benefits</h3>
+        <p>We increase the percentage of well-controlled patients by 30%, improving their quality of life
           and reducing complications."</p>
       </div>
       <div class="block">
@@ -97,8 +97,8 @@
         <P>Our platform for COPD includes a specific app for patients that allows them to monitor their inspiratory
           flow, oxygenation, and symptoms, and a platform for the healthcare team that facilitates the monitoring and
           management of chronic disease throughout its cycle.</p>
-          <h3>Benefits</h3> 
-          <p>We improve the quality of life of patients and reduce readmissions through continuous
+        <h3>Benefits</h3>
+        <p>We improve the quality of life of patients and reduce readmissions through continuous
           monitoring of the pathology."</P>
       </div>
     </div>
@@ -111,8 +111,8 @@
           patient's mobile app, which contains Artificial Intelligence-based algorithms that detect ectopic beats and
           the AF condition with high sensitivity and specificity. The platform for the healthcare team allows viewing
           of tracings and detections for continuous and personalized follow-up.</p>
-          <h3>Benefits</h3>
-          <p>We increase the percentage of patients receiving comprehensive care, resulting in a significant
+        <h3>Benefits</h3>
+        <p>We increase the percentage of patients receiving comprehensive care, resulting in a significant
           reduction in emergency visits and hospitalizations.</p>
       </div>
       <div class="block">
@@ -132,10 +132,10 @@
           the patient's blood glucose levels. The platform for the healthcare team allows viewing glucose curves with
           ingestion events marked on them. Additionally, it features a computer vision module capable of detecting the
           chemical composition of the food the patient is consuming.</p>
-          <h3>Benefits</h3>
-          <p>We increase the percentage of patients maintaining their glucose levels within limits,
+        <h3>Benefits</h3>
+        <p>We increase the percentage of patients maintaining their glucose levels within limits,
           resulting in a significant reduction in emergency visits and hospitalizations.</P>
-      </div>      
+      </div>
     </div>
   </section>
 
@@ -143,8 +143,9 @@
     <div class="contenedor">
       <div class="dispositivos-content">
         <h2>Devices</h2>
-        <p>We offer a variety of medical devices that automatically synchronize with the app to transfer multiple
-          variables, all from the comfort of the patient’s home.</p>
+        <p>We offer a range of medical devices that automatically connect to our app, transferring multiple health
+          variables directly to the platform. With Internet of Things (IoT) technology, these devices continuously monitor
+          the patient's health and send data in real-time, all with the convenience of being used at home.</p>
         <div class="dispositivos-img">
           <div class="disp-img">
             <img src="img/balance-device.png" alt="Scale">
@@ -224,31 +225,31 @@
       }
     });*/
 
-     //Visibilidad automatica del tooltip
+    //Visibilidad automatica del tooltip
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
-  const whatsappFloat = document.querySelector('.whatsapp-float');
-  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+      const whatsappFloat = document.querySelector('.whatsapp-float');
+      const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
-  if (tooltip) {
-    // Función para mostrar el tooltip
-    function showTooltip() {
-      tooltip.classList.add('visible');
-      setTimeout(() => {
-        tooltip.classList.remove('visible');
-      }, 5000); // Tooltip visibility duration (5 seconds)
-    }
+      if (tooltip) {
+        // Función para mostrar el tooltip
+        function showTooltip() {
+          tooltip.classList.add('visible');
+          setTimeout(() => {
+            tooltip.classList.remove('visible');
+          }, 5000); // Tooltip visibility duration (5 seconds)
+        }
 
-    // Mostrar el tooltip solo una vez después de que la página se cargue
-    setTimeout(() => {
-      showTooltip();
+        // Mostrar el tooltip solo una vez después de que la página se cargue
+        setTimeout(() => {
+          showTooltip();
 
-      // Volver a mostrar el tooltip cada 1 minuto
-      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
-  }
-});
+          // Volver a mostrar el tooltip cada 1 minuto
+          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+      }
+    });
   </script>
 </body>
 

@@ -35,7 +35,7 @@
           <li><a href="telemonitoreo-es.html">Telemonitoreo</a></li>
           <li><a href="nuestrosproductos-es.html">Nuestros Productos</a></li>
           <li><a href="instituciones-es.html">Instituciones</a></li>
-          <li><a href="#">Canales de Venta</a></li>
+          <li><a href="formulario-es.html">Contactenos</a></li>
         </ul>
       </nav>
     </header>
@@ -162,24 +162,24 @@
     </div>
   </section>
   <section class="blue2">
-    <h2>Principales de Beneficio Clínico</h2>
+    <h2>Principales Beneficios Clínicos</h2>
     <div class="contenedor">
       <div id="mecanismos">
         <div class="mecanismo">
           <img src="img/adherence.png" alt="Adherencia Terapéutica">
-          <div class="overlay">
+          <div>
             <span class="alt-text">Adherencia Terapéutica</span>
           </div>
         </div>
         <div class="mecanismo">
           <img src="img/parameters.png" alt="Mejor control de Parámetros Fisiológicos">
-          <div class="overlay">
+          <div>
             <span class="alt-text">Mejor control de Parámetros Fisiológicos</span>
           </div>
         </div>
         <div class="mecanismo">
           <img src="img/decompensations.png" alt="Detección precoz de descompensaciones">
-          <div class="overlay">
+          <div>
             <span class="alt-text">Detección precoz de descompensaciones</span>
           </div>
         </div>
@@ -238,7 +238,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
   <script src="script.js" defer></script>
   <script>
-    
+
     window.addEventListener('scroll', function () {
       var header = document.getElementById('cabecalho');
       if (window.scrollY > 60) {
@@ -248,34 +248,34 @@
       }
     });
 
- //Visibilidad automatica del tooltip
+    //Visibilidad automatica del tooltip
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
-  const whatsappFloat = document.querySelector('.whatsapp-float');
-  const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
+    document.addEventListener('DOMContentLoaded', () => {
+      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+      const whatsappFloat = document.querySelector('.whatsapp-float');
+      const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
-  if (tooltip) {
-    // Función para mostrar el tooltip
-    function showTooltip() {
-      tooltip.classList.add('visible');
-      setTimeout(() => {
-        tooltip.classList.remove('visible');
-      }, 5000); // Tooltip visibility duration (5 seconds)
-    }
+      if (tooltip) {
+        // Función para mostrar el tooltip
+        function showTooltip() {
+          tooltip.classList.add('visible');
+          setTimeout(() => {
+            tooltip.classList.remove('visible');
+          }, 5000); // Tooltip visibility duration (5 seconds)
+        }
 
-    // Mostrar el tooltip solo una vez después de que la página se cargue
-    setTimeout(() => {
-      showTooltip();
+        // Mostrar el tooltip solo una vez después de que la página se cargue
+        setTimeout(() => {
+          showTooltip();
 
-      // Volver a mostrar el tooltip cada 1 minuto
-      setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-    }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
-  }
-});
+          // Volver a mostrar el tooltip cada 1 minuto
+          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
+        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+      }
+    });
 
     //Contador animado
-    
+
     document.addEventListener("DOMContentLoaded", function () {
       const counters = document.querySelectorAll('.counter');
       const speed = 18; // Ajusta la velocidad del contador
@@ -308,36 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    //--- Animación Porcentajes ---
-
-    /*document.addEventListener('DOMContentLoaded', function () {
-    const options = {
-        root: null, // viewport
-        rootMargin: '0px',
-        threshold: 0.1 // porcentaje de visibilidad
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('barras-animate');
-                observer.unobserve(entry.target); // Dejar de observar el elemento una vez que ha entrado en la vista
-            }
-        });
-    }, options);
-
-    // Seleccionar los elementos a observar
-    document.querySelectorAll('.barras .barras-59, .barras .barras-56, .barras .barras-30')
-        .forEach(element => {
-            observer.observe(element);
-        });
-});*/
-
-
 
   </script>
-
-
 </body>
 
 </html>
