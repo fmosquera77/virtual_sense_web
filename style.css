@@ -77,40 +77,34 @@ body {
 .top-navbar {
     display: flex;
     justify-content: flex-end;
-    /* Distribuye el espacio entre los botones y los íconos */
     align-items: center;
-    /* Alinea verticalmente los elementos en el centro */
     background-color: #19192e;
     height: 70px;
     padding: 0 10px;
-    /* Espacio interno opcional */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
-
 }
 
 .top-navbar-buttons {
     display: flex;
     flex-direction: row;
-    /* Mantiene los botones en una sola línea */
     flex-wrap: nowrap;
-    /* Evita que los botones se envuelvan */
+    
     gap: 10px;
-    /* Espacio entre los botones */
+    
     align-items: center;
-    /* Alinea verticalmente los botones */
+    
 }
 
 .language-icons {
     display: flex;
     flex-direction: row;
-    /* Mantiene los íconos en una sola línea */
+    
     flex-wrap: nowrap;
-    /* Evita que los íconos se envuelvan */
+    
     gap: 10px;
-    /* Espacio entre los íconos */
+    
     align-items: center;
-    /* Alinea verticalmente los íconos */
+    
 }
 
 
@@ -238,11 +232,8 @@ body {
     border: 1px solid #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    /* Start invisible */
     visibility: hidden;
-    /* Start hidden */
     transition: opacity 0.3s, visibility 0.3s;
-    /* Smooth transition */
     z-index: 1000;
 
 }
@@ -262,16 +253,14 @@ body {
 
 .tooltip.visible {
     opacity: 1;
-    /* Show the tooltip */
     visibility: visible;
-    /* Make it visible */
+    
 }
 
 .whatsapp-float:hover .tooltip {
     opacity: 1;
-    /* Show the tooltip */
     visibility: visible;
-    /* Make it visible */
+    
 }
 
 /*--- --- --- FIN ICONO WHATSAPP --- --- ---*/
@@ -438,6 +427,7 @@ body {
     color: #EB8588;
     margin-bottom: 20px;
     width: 500px;
+    margin-left: 100px;
 }
 
 .blue1 .contenedor .block h3 {
@@ -447,6 +437,7 @@ body {
     color: #EB8588;
     margin: 25px 0px;
     width: 500px;
+    margin-left: 100px;
 }
 
 .blue1 .contenedor .block p {
@@ -454,6 +445,7 @@ body {
     width: 500px;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    margin-left: 100px;
 }
 
 .blue1 .contenedor .block li {
@@ -463,6 +455,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    margin-left: 100px;
 }
 
 /*--- --- --- Fin BLUE1 --- --- ---*/
@@ -470,17 +463,14 @@ body {
 /*--- --- --- TARJETAS --- --- ---*/
 .tarjetas {
     text-align: left;
-
-
 }
 
 .tarjetas h2 {
     font-family: BwModelicaSS02;
-    text-align: left;
-    margin: 40px;
+    text-align: center;
     color: #EB8588;
     font-size: 32px;
-    margin-bottom: 20px;
+
 }
 
 .tarjetas p {
@@ -617,7 +607,6 @@ body {
 }
 
 .telemonitoreo .contenedor .infografia img {
-
     width: 75%;
     padding: 40px;
     display: block;
@@ -639,6 +628,8 @@ body {
     line-height: 24px;
     margin: 0px 40px 20px 40px;
     color: #000000;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
 .telemonitoreo .contenedor .texto .button1 {
@@ -804,9 +795,6 @@ body {
     width: 150px;
     height: 60px;
 }
-
-
-
 
 
 
@@ -1002,10 +990,10 @@ footer a:hover {
 /*--- --- SECTION:DISPOSITIVOS TELEMONITOREO--- ---*/
 .dispositivos-content h2 {
     font-family: "BwModelicaSS02";
-    text-align: start;
+    text-align: center;
     font-size: 32px;
     color: #EB8588;
-    margin: 30px 0px 0px 100px;
+
 }
 
 .dispositivos-content p {
@@ -1014,9 +1002,10 @@ footer a:hover {
     font-size: 16px;
     line-height: 20px;
     color: #000000;
-    padding: 20px 100px;
+    padding: 30px 100px;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    margin-top: 20px;
 }
 
 .dispositivos-img {
@@ -1101,8 +1090,6 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-
 }
 
 .nuestrosproductos-head h3 {
@@ -1235,7 +1222,7 @@ footer a:hover {
     /* Asegura que el padding y borde estén incluidos en el tamaño total */
 }
 
-.alt-text{
+.alt-text {
     display: block;
     margin-top: 10px;
 }
@@ -1566,15 +1553,13 @@ footer a:hover {
     .blue1 .contenedor {
         display: flex;
         flex-direction: column;
-        /* Stack elements vertically on smaller screens */
         height: auto;
     }
 
     .blue1 .contenedor .block img {
-        padding: 0 10%;
-        /* Reduce padding for smaller screens */
+        padding: 0 20%;
         max-width: 100%;
-        /* Ensure the image doesn't overflow */
+
     }
 
     .blue1 .contenedor .block h2,
@@ -1627,7 +1612,6 @@ footer a:hover {
     .white1 .contenedor .block img {
         padding: 0;
         width: 50%;
-        ;
         margin: 0 auto;
     }
 
@@ -1857,6 +1841,7 @@ footer a:hover {
     .telemonitoreo-head h3 {
         font-size: 25px !important;
     }
+
     .quees {
         padding: 25px;
     }
