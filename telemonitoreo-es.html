@@ -81,16 +81,14 @@
       </div>
     </div>
   </section>
-  <section class="monitoreo-remoto">
-    <div class="contenedor">
-      <h2>Evidencia Cientifica</h2>
-  </section>
+ 
   <section class="costos">
     <div class="contenedor">
       <div class="costos2">
-        <h2>¿Hay evidencia clínica de su efectividad?</h2>
+        <h2>Evidencia Científica</h2>
         <div class="content">
           <div class="textos">
+            <h3>¿Hay evidencia clínica de su efectividad?</h3>
             <p>Durante los últimos años, múltiples estudios científicos han demostrado que el telemonitoreo mejora tanto
               la cantidad como la calidad de vida de los pacientes con enfermedades crónicas. Este enfoque no solo
               facilita un manejo más eficaz de los síntomas y una mejor adherencia a los tratamientos, sino que también
@@ -99,10 +97,10 @@
             <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* The Impact of
               Telemonitoring on 30-day Readmissions for Patients
               Hospitalized with Heart Failure: A Safety-Net Hospital's Experience, Journal of Cardiac Failure, Volume
-              24, Issue 8, Supplement, 2018, Page S93.
+              24, Issue 8, Supplement, 2018, Page S93. <br>
               **Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a
               randomised, controlled, parallel-group, unmasked
-              trial. Lancet . 2018 Sep 22;392(10152):1047-1057. ***Self-monitoring of blood pressure in hypertension: a
+              trial. Lancet . 2018 Sep 22;392(10152):1047-1057. <br>***Self-monitoring of blood pressure in hypertension: a
               systematic review and individual patient
               data meta-analysis. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
           </div>
@@ -251,26 +249,21 @@
     //Visibilidad automatica del tooltip
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 5000); // Tooltip visibility duration (5 seconds)
+          }, 5000); // Tooltip visibility 5 seconds
         }
 
-        // Mostrar el tooltip solo una vez después de que la página se cargue
         setTimeout(() => {
           showTooltip();
-
-          // Volver a mostrar el tooltip cada 1 minuto
-          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+          setInterval(showTooltip, 60000); // 1 minuto = 60000ms
+        }, 3000); // 3 segundos después de que la página se cargue
       }
     });
 

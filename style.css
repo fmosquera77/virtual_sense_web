@@ -408,12 +408,12 @@ body {
 /*--- --- --- BLUE1 --- --- ---*/
 .blue1 {
     background: #013E6A;
-    height: 525px;
+    height: auto;
 }
 
 .blue1 .contenedor {
     display: flex;
-    height: 525px;
+    height: auto;
 }
 
 .blue1 .contenedor .block img {
@@ -427,7 +427,7 @@ body {
     color: #EB8588;
     margin-bottom: 20px;
     width: 500px;
-    margin-left: 100px;
+    margin-left: 80px;
 }
 
 .blue1 .contenedor .block h3 {
@@ -445,7 +445,7 @@ body {
     width: 500px;
     line-height: 1.6;
     letter-spacing: 0.5px;
-    margin-left: 100px;
+    margin-left: 80px;
 }
 
 .blue1 .contenedor .block li {
@@ -873,6 +873,7 @@ footer a:hover {
     text-align: left;
     color: #000000;
 }
+
 
 /*--- --- --- FIN PAGINA QUIÉNES SOMOS --- --- ---*/
 

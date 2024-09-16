@@ -78,6 +78,7 @@
         <h2>Evidências Clínicas</h2>
         <div class="content">
           <div class="textos">
+            <h3>Há evidência clínica de sua eficácia?</h3>
             <p>Nos últimos anos, vários estudos científicos comprovaram que o telemonitoramento melhora tanto a
               quantidade quanto a qualidade de vida de pacientes com doenças crônicas. Essa abordagem não só facilita um
               manejo mais eficaz dos sintomas e melhora a adesão aos tratamentos, como também reduz custos para o
@@ -86,10 +87,10 @@
             <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* O Impacto do
               Telemonitoramento nas Readmissões em 30 dias para Pacientes Hospitalizados com Insuficiência Cardíaca: A
               Experiência de um Hospital de Segurança, Journal of Cardiac Failure, Volume 24, Edição 8, Suplemento,
-              2018, Página S93. ** Eficácia do gerenciamento telemédico em pacientes com insuficiência cardíaca
+              2018, Página S93. <br>** Eficácia do gerenciamento telemédico em pacientes com insuficiência cardíaca
               (TIM-HF2): um
               ensaio clínico randomizado, controlado, em grupos paralelos e sem máscara. Lancet . 22 de setembro de
-              2018; 392(10152):1047-1057. *** Auto-monitoramento da pressão arterial na hipertensão: uma revisão
+              2018; 392(10152):1047-1057. <br> *** Auto-monitoramento da pressão arterial na hipertensão: uma revisão
               sistemática e
               meta-análise de dados individuais de pacientes. PLoS Med. (2017) 14:e1002389. doi:
               10.1371/journal.pmed.1002389</p>
@@ -237,29 +238,25 @@
     //Visibilidad automatica del tooltip
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 5000); // Tooltip visibility duration (5 seconds)
+          }, 5000); // Tooltip visibility 5 seconds
         }
 
-        // Mostrar el tooltip solo una vez después de que la página se cargue
         setTimeout(() => {
           showTooltip();
-
-          // Volver a mostrar el tooltip cada 1 minuto
-          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+          setInterval(showTooltip, 60000); // 1 minuto = 60000ms
+        }, 3000); // 3 segundos después de que la página se cargue
       }
     });
 
+    
     //Contador animado
     document.addEventListener("DOMContentLoaded", function () {
       const counters = document.querySelectorAll('.counter');

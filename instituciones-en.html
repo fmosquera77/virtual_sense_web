@@ -50,11 +50,11 @@
       <h2>The institutions affiliated with Virtual Sense offer:</h2>
       <ul>
         <li><strong>Remote care</strong> aligned with new patient demands, focusing on prevention.</li><br>
-        <li><strong>Daily monitoring</strong> in real-time that feeds into a patient event history.</li><br>
-        <li>Incentives for adhering to the <strong>diet and medication.</strong></li><br>
-        <li><strong>Early detection of suspicious symptoms</strong>, changes in vital signs.</li><br>
-        <li><strong>Accuracy of diagnosis</strong> through the use of evidence-based medical parameters.</li><br>
-        <li>Provision of <strong>immediate and focused responses</strong> in specific situations.</li><br>
+        <li><strong>Daily real-time monitoring</strong> integrated into a patient event history</li><br>
+        <li><strong>Incentives</strong> for diet and medication adherence</li><br>
+        <li><strong>Early detection</strong> of suspicious symptoms and changes in vital signs.</li><br>
+        <li><strong>Accurate diagnosis</strong> through evidence-based medical parameters.</li><br>
+        <li><strong>immediate and focused responses</strong> in specific situations..</li><br>
         <li><strong>Breaking down</strong> barriers of space and time.</li><br>
       </ul>
       <h2>Some institutions that<strong> trust us </strong></h2>
@@ -139,43 +139,25 @@
       }
     });
 
-    /*window.addEventListener('scroll', function () {
-      var header = document.getElementById('cabecalho');
-      var logoContainer = document.querySelector('.logo-contenedor');
-      var logo = document.querySelector('.logo');
+    
+   //Visibilidad automatica del tooltip
 
-      if (window.scrollY > 320) {
-        logoContainer.style.width = '220px';
-        logo.style.width = '100%';
-      } else {
-        logoContainer.style.width = '320px';
-        logo.style.width = 'auto';
-      }
-    });*/
-
-    //Visibilidad automatica del tooltip
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
+   document.addEventListener('DOMContentLoaded', () => {
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 5000); // Tooltip visibility duration (5 seconds)
+          }, 5000); // Tooltip visibility 5 seconds
         }
 
-        // Mostrar el tooltip solo una vez después de que la página se cargue
         setTimeout(() => {
           showTooltip();
-
-          // Volver a mostrar el tooltip cada 1 minuto
-          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+          setInterval(showTooltip, 60000); // 1 minuto = 60000ms
+        }, 3000); // 3 segundos después de que la página se cargue
       }
     });
 

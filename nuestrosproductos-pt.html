@@ -201,43 +201,24 @@
       }
     });
 
-    /*window.addEventListener('scroll', function () {
-      var header = document.getElementById('cabecalho');
-      var logoContainer = document.querySelector('.logo-contenedor');
-      var logo = document.querySelector('.logo');
- 
-      if (window.scrollY > 320) {
-        logoContainer.style.width = '220px';
-        logo.style.width = '100%';
-      } else {
-        logoContainer.style.width = '320px';
-        logo.style.width = 'auto';
-      }
-    });*/
-
     //Visibilidad automatica del tooltip
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 5000); // Tooltip visibility duration (5 seconds)
+          }, 5000); // Tooltip visibility 5 seconds
         }
 
-        // Mostrar el tooltip solo una vez después de que la página se cargue
         setTimeout(() => {
           showTooltip();
-
-          // Volver a mostrar el tooltip cada 1 minuto
-          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+          setInterval(showTooltip, 60000); // 1 minuto = 60000ms
+        }, 3000); // 3 segundos después de que la página se cargue
       }
     });
   </script>

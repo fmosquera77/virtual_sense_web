@@ -54,43 +54,41 @@
         </div>
         <div class="textoquees">
           <h2>What is Telemonitoring?</h2>
-          <p>Remote patient monitoring, within the scope of telemedicine, involves the use of medical devices and
-            digital platforms to closely monitor patients' health from a distance. This technology allows healthcare
-            professionals to detect changes early and take timely actions, without the need for patients to be
-            physically present and with the possibility of doing so asynchronously.
+          <p>Telemonitoring uses medical devices and digital platforms to monitor patients' health remotely. This
+            technology enables early detection of changes and timely actions without requiring physical presence, often
+            asynchronously.
           </p>
           <h2>Benefits of Telemonitoring</h2>
           <ul>
-            <li> <strong>For the patient:</strong> Improves quality of life, makes them feel more cared for and supported.</li>
-            <li> <strong>For the healthcare team: </strong>Provides an innovative service with scientifically proven effectiveness that
+            <li> <strong>For the patient:</strong> Improves quality of life, makes them feel more cared for and
+              supported.</li>
+            <li> <strong>For the healthcare team: </strong>Provides an innovative service with scientifically proven
+              effectiveness that
               enables good medical practice while generating new revenue.</li>
-            <li> <strong>For the system and funders:</strong> Significantly reduces costs and provides analytics, metrics, and information
+            <li> <strong>For the system and funders:</strong> Significantly reduces costs and provides analytics,
+              metrics, and information
               that helps make resource use more efficient.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
-  <section class="monitoreo-remoto">
-    <div class="contenedor">
-      <h2>Scientific Evidence</h2>
-  </section>
+
   <section class="costos">
     <div class="contenedor">
       <div class="costos2">
-        <h2>Is there clinical evidence of its effectiveness?</h2>
+        <h2>Scientific Evidence</h2>
         <div class="content">
           <div class="textos">
-            <p>In recent years, multiple scientific studies have shown that telemonitoring improves both the quantity
-              and quality of life for patients with chronic diseases. This approach not only facilitates more effective
-              symptom management and better adherence to treatments but also reduces healthcare costs by decreasing the
-              frequency of hospitalizations and the need for intensive care, solidifying itself as an essential tool in
-              terms of health.</p>
+            <h3>Is there clinical evidence of its effectiveness?</h3>
+            <p>Recent studies have demonstrated that telemonitoring improves both the quantity and quality of life for
+              patients with chronic diseases. This approach not only enhances symptom management and treatment adherence
+              but also reduces healthcare costs by decreasing hospitalizations and the need for intensive care.</p>
             <p style="font-family: Montserrat; font-size: 12px; line-height: 20px; text-align: left; ">* The Impact of
               Telemonitoring on 30-day Readmissions for Patients Hospitalized with Heart Failure: A Safety-Net
-              Hospital's Experience, Journal of Cardiac Failure, Volume 24, Issue 8, Supplement, 2018, Page S93.
+              Hospital's Experience, Journal of Cardiac Failure, Volume 24, Issue 8, Supplement, 2018, Page S93. <br>
               **Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a
-              randomised, controlled, parallel-group, unmasked trial. Lancet. 2018 Sep 22;392(10152):1047-1057.
+              randomized, controlled, parallel-group, unmasked trial. Lancet. 2018 Sep 22;392(10152):1047-1057. <br>
               ***Self-monitoring of blood pressure in hypertension: a systematic review and individual patient data
               meta-analysis. PLoS Med. (2017) 14:e1002389. doi: 10.1371/journal.pmed.1002389</p>
           </div>
@@ -198,8 +196,8 @@
           <p>Reduces indirect costs for the patient and direct costs for the health system</p>
         </div>
         <div class="te-texto">
-          <h4>Keeps YOU COMPANY</h4>
-          <p>Provides safety and confidence in a daily environment and support for the family.</p>
+          <h4>KEEPS YOU COMPANY</h4>
+          <p>Provides safety and confidence in a daily environment and support for the family</p>
         </div>
       </div>
     </div>
@@ -236,27 +234,24 @@
 
     //Visibilidad automatica del tooltip
 
+    //Visibilidad automatica del tooltip
+
     document.addEventListener('DOMContentLoaded', () => {
-      // Seleccionamos el tooltip dentro del contenedor .whatsapp-float
       const whatsappFloat = document.querySelector('.whatsapp-float');
       const tooltip = whatsappFloat ? whatsappFloat.querySelector('.tooltip') : null;
 
       if (tooltip) {
-        // Función para mostrar el tooltip
         function showTooltip() {
           tooltip.classList.add('visible');
           setTimeout(() => {
             tooltip.classList.remove('visible');
-          }, 5000); // Tooltip visibility duration (5 seconds)
+          }, 5000); // Tooltip visibility 5 seconds
         }
 
-        // Mostrar el tooltip solo una vez después de que la página se cargue
         setTimeout(() => {
           showTooltip();
-
-          // Volver a mostrar el tooltip cada 1 minuto
-          setInterval(showTooltip, 60000); // Repetir cada 1 minuto = 60000ms
-        }, 3000); // Mostrar tooltip 3 segundos después de que la página se cargue
+          setInterval(showTooltip, 60000); // 1 minuto = 60000ms
+        }, 3000); // 3 segundos después de que la página se cargue
       }
     });
 
